@@ -161,3 +161,83 @@ Valori ammessi per Azione con trade aperto:
 - CHIUDI PARZIALE
 - CHIUDI TOTALE
 - NESSUNA AZIONE
+
+## Journal-ready output
+
+Ogni analisi deve produrre un blocco journal automatico, anche quando la decisione finale è:
+
+- TRADE NON VALIDO
+- DA MONITORARE
+- ASSET NON LEGGIBILE
+
+Il journal deve registrare anche i trade scartati, perché servono per misurare disciplina, qualità dei filtri e prevenzione dei setup mediocri.
+
+[JOURNAL AUTO-ENTRY - SETUP]
+
+Data analisi:
+Ora analisi:
+Asset:
+Timeframe input:
+Screenshot HTF presente:
+Screenshot LTF presente:
+Materiale sufficiente:
+Modalità:
+Bias HTF:
+Stato mercato HTF:
+Zona primaria:
+Zona secondaria:
+Invalidazione strutturale:
+Reazione LTF:
+Classificazione reazione:
+Tipo entry:
+Entry:
+Stop Loss:
+Motivo Stop Loss:
+TP1:
+TP2:
+R:R su TP1:
+R:R su TP2:
+Score HTF:
+Score LTF:
+Score Trigger:
+Score R:R / qualità operativa:
+Score finale:
+Hard veto attivi:
+Decisione rischio:
+Rischio monetario fisso:
+Distanza Entry-SL:
+Size calcolabile:
+Dati mancanti per size:
+Decisione finale:
+Azione:
+Motivo principale:
+Validità temporale setup:
+Cosa monitorare:
+Trade preso:
+Esito:
+Note review:
+
+[JOURNAL AUTO-ENTRY - TRADE APERTO]
+
+Data analisi:
+Ora analisi:
+Asset:
+Direzione trade:
+Entry:
+Stop attuale:
+Target:
+Stato trade:
+Deterioramento:
+Motivo deterioramento:
+Azione consigliata:
+Nuovo stop:
+Gestione profitto:
+Uscita anticipata:
+Decisione rischio:
+Hard veto rischio:
+Azione finale:
+Motivo:
+Esito aggiornato:
+Note review:
+
+I campi `Trade preso`, `Esito`, `Esito aggiornato` e `Note review` possono restare vuoti o “da aggiornare” al momento dell’analisi iniziale.
