@@ -77,6 +77,25 @@ Valori ammessi:
 - Non inventare conferme non visibili
 - Non commentare aree lontane dalla zona HTF
 
+## Relazione con Scenario Evidence
+
+LTF deve leggere la reazione del prezzo rispetto a:
+
+1. zona HTF selezionata;
+2. scenario principale selezionato da `12-Scenario Evidence e Candidate Discovery.md`.
+
+LTF non deve creare nuovi scenari.
+LTF deve verificare se la reazione locale conferma, indebolisce o invalida lo scenario principale.
+
+Regole:
+
+- Se scenario = CONTINUATION, LTF deve cercare reazione coerente con continuation: retest, acceptance, reclaim, pullback ordinato, ripartenza non tardiva.
+- Se scenario = REVERSAL_CANDIDATE, LTF deve cercare failed auction, sweep/reclaim, rejection, CHOCH, perdita di accettazione della vecchia direzione.
+- Se scenario = BALANCE_ROTATION, LTF deve cercare rifiuto dell’estremo di balance/value e ritorno verso POC o area centrale.
+- Se scenario = NO_EDGE, LTF non deve forzare nessun setup.
+- Se Stato operativo scenario = WAIT_FOR_RETEST, LTF deve verificare se il retest è avvenuto, in corso, mancato o fallito.
+- Se Stato temporale scenario = TARDIVO, LTF non può promuovere il setup senza nuovo trigger/retest.
+
 ## Output LTF obbligatorio
 
 [ASSET: ... | TIMING LTF]
@@ -96,4 +115,13 @@ Condizione di attivazione:
 Stop tecnico potenziale:
 Invalidazione locale:
 Qualità timing:
+Scenario principale ricevuto:
+Stato temporale scenario:
+Stato operativo scenario:
+Reazione coerente con scenario:
+Retest richiesto:
+Retest visibile:
+Scenario confermato da LTF:
+Scenario indebolito da LTF:
+Scenario invalidato da LTF:
 Sintesi operativa:

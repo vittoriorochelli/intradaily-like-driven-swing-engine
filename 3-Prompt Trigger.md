@@ -26,6 +26,25 @@ Un trade è valido solo se:
 
 Il trigger non può essere validato se mancano elementi indispensabili alla decisione.
 
+## Relazione con Scenario Evidence
+
+Il Trigger deve validare solo trigger coerenti con lo scenario principale.
+
+Lo scenario non sostituisce il trigger.
+TRADE_NOW nello scenario non significa TRADE VALIDO finale.
+Significa solo che il candidate può passare alla validazione Trigger.
+
+Regole:
+
+- Se scenario = CONTINUATION, trigger validi preferiti: retest di zona, acceptance/retest, pullback/reclaim coerente, micro-BOS/CHOCH nella direzione del trend.
+- Se scenario = REVERSAL_CANDIDATE, trigger validi preferiti: sweep/reclaim, failed auction reclaim, rejection, CHOCH/retest.
+- Se scenario = BALANCE_ROTATION, trigger validi preferiti: rifiuto dell’estremo, failed auction, sweep/reclaim, ritorno verso value/POC.
+- Se scenario = NO_EDGE, il Trigger deve essere TRADE NON VALIDO.
+- Se Stato operativo scenario = WAIT_FOR_RETEST, il Trigger deve validare solo se il retest è visibile e confermato.
+- Se Stato temporale scenario = TARDIVO, il Trigger deve classificare TRADE NON VALIDO o DA MONITORARE salvo nuovo trigger/retest.
+- Se Stato temporale scenario = FUTURO_CONDIZIONALE, il Trigger non può produrre TRADE VALIDO ora.
+- Se scenario evidence pack = INSUFFICIENTE, il Trigger non può produrre TRADE VALIDO.
+
 ## Hard veto
 
 Bloccare il trade se:
@@ -231,6 +250,17 @@ Hard veto Trigger:
 - TP2 non realistico
 - R:R su TP2 < 1:2
 
+## Hard veto condizionali per scenario
+
+Non eliminare gli hard veto esistenti.
+
+Aggiungi però questa regola:
+
+- Bias HTF neutro/confuso è hard veto automatico solo quando lo scenario richiede bias direzionale pulito.
+- Per BALANCE_ROTATION, un HTF in balance non è hard veto se l’evidence pack è solido.
+- Per REVERSAL_CANDIDATE, una struttura in transizione non è hard veto se l’evidence pack mostra supply/demand, failed auction, sweep/reclaim, rejection o perdita di accettazione.
+- Per CONTINUATION, invece, serve maggiore chiarezza direzionale.
+
 Hard veto rischio preliminare:
 - setup non compatibile con rischio monetario fisso
 - size presumibilmente impraticabile
@@ -249,6 +279,14 @@ Valori ammessi:
 [ASSET: ... | TRIGGER]
 
 Tipo entry:
+Scenario principale:
+Stato temporale scenario:
+Stato operativo scenario:
+Trigger coerente con scenario:
+Scenario tardivo:
+Scenario futuro condizionale:
+Scenario consente trade ora:
+Motivo scenario/trigger:
 Entry:
 Motivo entry:
 Stop Loss:
