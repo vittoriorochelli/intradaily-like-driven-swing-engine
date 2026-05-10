@@ -85,10 +85,50 @@ Il sistema swing usa principalmente automazione full.
 - Non forzare trade
 - Se il trade non è valido, dichiaralo chiaramente
 - Se il materiale è insufficiente, fermati al preflight
+- La risposta deve iniziare sempre con `[DECISIONE OPERATIVA]`, prima del dettaglio completo
 - Il sistema deve sempre generare un blocco journal auto-entry
 - Il journal deve essere generato anche per TRADE NON VALIDO, DA MONITORARE e ASSET NON LEGGIBILE
 - Il journal non deve essere narrativo: deve essere sintetico, confrontabile e copiabile in tabella
 - Se mancano dati, il journal deve riportare il dato come `mancante`, `non applicabile` o `da aggiornare`, senza inventare nulla
+
+## Output operativo prioritario
+
+Ogni esecuzione di `automazione_full.md` deve iniziare la risposta con un blocco sintetico di decisione operativa.
+
+Questo blocco deve venire prima del dettaglio completo.
+
+[DECISIONE OPERATIVA]
+
+Asset:
+Decisione:
+Motivo principale:
+Score finale:
+Hard veto attivi:
+Decisione rischio:
+Azione immediata:
+Prossimo passo:
+
+Valori ammessi per Decisione:
+
+- TRADE VALIDO
+- TRADE NON VALIDO
+- DA MONITORARE
+- GESTIRE TRADE APERTO
+- ASSET NON LEGGIBILE
+
+Regole:
+
+- Se esiste un hard veto attivo, Decisione = TRADE NON VALIDO.
+- Se il materiale non è leggibile, Decisione = ASSET NON LEGGIBILE.
+- Se Score finale < 60, Decisione = TRADE NON VALIDO.
+- Se Score finale è 60-74 senza hard veto, Decisione = DA MONITORARE.
+- Se Score finale >= 75 senza hard veto e rischio ok, Decisione = TRADE VALIDO.
+- Se esiste trade aperto, Decisione = GESTIRE TRADE APERTO, salvo trade invalidato.
+- Se Decisione rischio = RISCHIO NON OK, Decisione = TRADE NON VALIDO.
+- Se Decisione rischio = DATI RISCHIO MANCANTI, Decisione = DA MONITORARE o TRADE NON VALIDO.
+- Il blocco deve essere sintetico: niente spiegazioni lunghe.
+- Il dettaglio completo deve restare nelle sezioni successive.
+- Il journal auto-entry deve restare sempre generato.
 
 ## Output finale
 
