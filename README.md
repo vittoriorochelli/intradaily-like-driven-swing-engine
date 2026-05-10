@@ -25,7 +25,8 @@ Il core system è organizzato in blocchi logici:
 6. `5-Risk e Position Sizing.md`
 7. `6-Journal e Review.md`
 8. `7-Multi Asset Ranking.md`
-9. `automazione_full.md`
+9. `8-Paper Trading Protocol.md`
+10. `automazione_full.md`
 
 ## Uso operativo
 
@@ -50,6 +51,13 @@ Nel sistema swing/multiday non è previsto un refresh continuo del trigger duran
 - gli asset con hard veto non possono essere promossi;
 - il sistema deve considerare correlazione e rischio aggregato;
 - se nessun asset è valido, la decisione corretta è NESSUN TRADE.
+
+## Paper trading
+
+- il sistema non è pronto per trading reale senza paper trading documentato;
+- il paper trading serve a validare processo, disciplina, hard veto, scoring, rischio e journal;
+- prima del reale servono almeno 50 trade simulati, 8 settimane operative e review completa;
+- nessuna automazione reale deve essere implementata prima della validazione.
 
 
 ## Logica di rischio
