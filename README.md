@@ -33,6 +33,25 @@ L’uso ordinario avviene tramite:
 I singoli file modulari servono come componenti logiche interne.  
 Nel sistema swing/multiday non è previsto un refresh continuo del trigger durante la giornata.
 
+## Derivazione da trading-intraday
+
+Il sistema nasce come trasposizione swing/multiday della logica `trading-intraday`.
+
+Mappa di trasformazione:
+
+- H1 nudo intraday → D1/H4 swing per struttura HTF
+- M5 nudo intraday → H4/H1 swing per reazione LTF
+- M5 con VWAP e Volume Profile → H4/H1 con VWAP, Volume Profile locale e dominance se disponibile
+- refresh intraday → automazione full unica nel sistema swing
+- trigger rapido intraday → trigger swing più selettivo
+- gestione ravvicinata intraday → gestione H4/D1
+
+Nota:
+la versione swing mantiene la logica screenshot-driven, ma riduce il numero di input ordinari a due screenshot informativi:
+
+- HTF D1/H4
+- LTF H4/H1
+
 ## Input standard
 
 Il sistema usa ordinariamente due screenshot:

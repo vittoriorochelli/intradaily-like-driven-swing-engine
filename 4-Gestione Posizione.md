@@ -35,6 +35,19 @@ Questo blocco si usa solo se esiste una posizione aperta.
 
 Se il trade perde qualità, va segnalato anche se stop loss o take profit non sono stati toccati.
 
+## Derivazione dalla gestione intraday
+
+La gestione swing non deve essere iper-reattiva.
+
+Deve lavorare soprattutto su H4/D1 e valutare:
+
+- trade vivo
+- in conferma
+- in deterioramento
+- invalidato
+- protezione profitto
+- uscita anticipata se il trade perde qualità
+
 ## Output base
 
 [ASSET: ... | GESTIONE POSIZIONE]

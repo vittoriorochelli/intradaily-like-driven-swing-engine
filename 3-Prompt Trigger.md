@@ -20,6 +20,19 @@ Un trade può essere valido solo se:
 - rapporto rischio/rendimento accettabile
 - nessun hard veto attivo
 
+## Differenza rispetto al trigger intraday
+
+Nel sistema swing il trigger non va refreshato molte volte al giorno.
+
+Il trigger swing è valido solo se:
+
+- HTF è chiaro
+- LTF conferma
+- stop tecnico è ricavabile
+- rapporto rischio/rendimento è accettabile
+- indicatori necessari sono visibili
+- nessun hard veto è attivo
+
 Il trigger non può essere validato se mancano elementi indispensabili alla decisione, come:
 
 - struttura locale leggibile;

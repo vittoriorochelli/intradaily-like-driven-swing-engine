@@ -15,6 +15,15 @@ Serve solo a controllare qualità, coerenza e completezza degli input.
 - Screenshot LTF H4/H1
 - Eventuale indicazione di trade già aperto
 
+## Mappa input intraday → swing
+
+- H1 nudo intraday diventa screenshot HTF D1/H4
+- M5 nudo intraday diventa screenshot LTF H4/H1
+- M5 con VWAP/VP diventa H4/H1 con indicatori necessari visibili
+
+La presenza dei due screenshot non basta.
+Devono essere leggibili, con zoom adeguato e indicatori necessari presenti.
+
 ## Validità dello screenshot
 
 La presenza dello screenshot non è sufficiente.

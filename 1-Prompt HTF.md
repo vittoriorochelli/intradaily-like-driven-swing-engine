@@ -19,6 +19,21 @@ Se lo screenshot D1/H4 non permette di leggere struttura o indicatori necessari,
 - D1: struttura primaria
 - H4: struttura operativa
 
+## Derivazione intraday → HTF swing
+
+Il blocco HTF swing eredita la funzione del blocco strutturale intraday, ma lavora su D1/H4 invece che H1/M5.
+
+Deve dare più peso a:
+
+- struttura swing
+- supply/demand
+- Wyckoff
+- Auction Market Theory
+- Volume Profile
+- AVWAP
+- livelli di valore
+- invalidazione strutturale
+
 ## Cosa valutare
 
 - Trend, balance o transizione
