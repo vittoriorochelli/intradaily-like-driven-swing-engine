@@ -33,6 +33,39 @@ L’uso ordinario avviene tramite:
 I singoli file modulari servono come componenti logiche interne.  
 Nel sistema swing/multiday non è previsto un refresh continuo del trigger durante la giornata.
 
+## Input standard
+
+Il sistema usa ordinariamente due screenshot:
+
+- Screenshot HTF D1/H4
+- Screenshot LTF H4/H1
+
+Lo screenshot D1/H4 serve per ricavare:
+
+- struttura swing;
+- trend, balance o transizione;
+- zone supply/demand;
+- livelli strutturali;
+- Volume Profile se presente;
+- AVWAP se presente;
+- invalidazione strutturale.
+
+Lo screenshot H4/H1 serve per ricavare:
+
+- reazione locale;
+- rejection;
+- absorption;
+- acceptance;
+- false break;
+- retest;
+- micro-BOS/CHOCH;
+- rapporto con VWAP se presente;
+- Volume Profile locale se presente;
+- dominance buyers/sellers se presente;
+- stop tecnico e invalidazione locale.
+
+L’utente non deve fornire zone/livelli già tracciati: il sistema li ricava dall’analisi.
+
 ## Timeframe di riferimento
 
 - W1: cornice opzionale

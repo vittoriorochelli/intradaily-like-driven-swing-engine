@@ -20,6 +20,15 @@ Un trade può essere valido solo se:
 - rapporto rischio/rendimento accettabile
 - nessun hard veto attivo
 
+Il trigger non può essere validato se mancano elementi indispensabili alla decisione, come:
+
+- struttura locale leggibile;
+- stop tecnico ricavabile;
+- rapporto rischio/rendimento stimabile;
+- VWAP se usata come conferma necessaria;
+- Volume Profile se usato come conferma necessaria;
+- dominance buyers/sellers se usata come conferma necessaria.
+
 ## Hard veto
 
 Bloccare il trade se:

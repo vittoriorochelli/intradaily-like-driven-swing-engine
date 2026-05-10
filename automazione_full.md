@@ -11,6 +11,11 @@ Questo è il file operativo principale del sistema.
 Nel sistema swing/multiday l’analisi viene eseguita principalmente tramite automazione full.  
 Non è previsto il refresh frequente del trigger durante la giornata.
 
+## Input ordinario richiesto
+
+1. Screenshot HTF D1/H4
+2. Screenshot LTF H4/H1
+
 ## Sequenza obbligatoria
 
 1. Preflight Input Check
@@ -25,8 +30,12 @@ Non è previsto il refresh frequente del trigger durante la giornata.
 - Leggi gli screenshot forniti
 - Non mescolare timeframe
 - Non inventare dati non visibili
+- Non inventare zone, livelli, indicatori o conferme non visibili
+- Le zone e i livelli devono essere prodotti dal sistema, non richiesti all’utente come input già tracciati
 - Se uno screenshot è assegnato male, rimappalo
 - Se mancano dati essenziali, segnalalo
+- Se gli screenshot non sono leggibili o mancano indicatori indispensabili, fermati al Preflight
+- Chiedere integrazione mirata quando necessario
 - Non forzare trade
 - Se il trade non è valido, dichiaralo chiaramente
 - Se il materiale è insufficiente, fermati al preflight
