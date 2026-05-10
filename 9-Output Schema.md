@@ -78,6 +78,56 @@ Narrativa basata principalmente su:
 Affidabilità indicatori:
 Integrazione richiesta:
 
+## Output scenario evidence e candidate discovery
+
+[SCENARIO EVIDENCE PACK]
+
+Supply rilevanti:
+Demand rilevanti:
+Livelli di rotazione:
+Liquidità sopra:
+Liquidità sotto:
+Area di valore:
+POC / VAH / VAL:
+VWAP / AVWAP utilizzabili:
+Indicatori non verificabili:
+Prezzo attuale rispetto alle zone:
+Movimento precedente:
+Reazione visibile:
+Spazio operativo:
+Dati mancanti:
+Affidabilità evidence pack:
+
+[SCENARIO CANDIDATE]
+
+Scenario:
+Direzione:
+Zona di riferimento:
+Evidenze a favore:
+Evidenze contro:
+Dati mancanti:
+Stato temporale:
+Stato operativo:
+Rilevanza operativa:
+Candidate valido:
+Motivo:
+
+[SCENARIO DISCOVERY OUTPUT]
+
+Evidence pack affidabile:
+Numero candidate:
+Candidate principale:
+Scenario principale:
+Direzione:
+Stato temporale:
+Stato operativo:
+Rilevanza operativa:
+Motivo scelta candidate principale:
+Scenario alternativi:
+Scenario scartati:
+Dati mancanti:
+Impatto su LTF/Trigger:
+
 ## Output finale single asset
 
 [ASSET: ... | DECISIONE FINALE]
@@ -89,6 +139,15 @@ Setup già partito:
 Entry ancora disponibile:
 Entry già passata:
 Stato operativo da narrativa:
+Scenario evidence pack:
+Evidence pack affidabile:
+Scenario principale:
+Direzione scenario:
+Stato temporale scenario:
+Stato operativo scenario:
+Rilevanza operativa scenario:
+Scenario alternativi:
+Dati scenario mancanti:
 Indicatori utilizzabili per narrativa:
 Indicatori non verificabili:
 Affidabilità indicatori:
