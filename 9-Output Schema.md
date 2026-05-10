@@ -29,6 +29,29 @@ Valori ammessi per Decisione:
 - GESTIRE TRADE APERTO
 - ASSET NON LEGGIBILE
 
+## Output indicator setup check
+
+[INDICATOR SETUP CHECK]
+
+VWAP visibile:
+Tipo VWAP:
+VWAP utilizzabile:
+Motivo VWAP:
+AVWAP visibile:
+Anchor AVWAP visibile/dichiarato:
+Anchor AVWAP sensato:
+AVWAP utilizzabile:
+Motivo AVWAP:
+Volume Profile visibile:
+Range/ancoraggio VP sensato:
+POC/VAH/VAL leggibili:
+VP utilizzabile:
+Motivo VP:
+Indicatori utilizzabili per narrativa:
+Indicatori solo di supporto:
+Indicatori non utilizzabili:
+Impatto sulla decisione:
+
 ## Output finale single asset
 
 [ASSET: ... | DECISIONE FINALE]
