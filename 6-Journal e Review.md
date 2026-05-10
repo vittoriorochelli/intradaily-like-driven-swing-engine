@@ -76,41 +76,41 @@ Regole:
 38. Stop a BE dopo TP1
 39. Runner verso TP2
 40. Decisione piano condizionale
-26. Modalità
-27. Bias HTF
-28. Stato mercato HTF
-29. Zona primaria
-30. Zona secondaria
-31. Invalidazione strutturale
-32. Reazione LTF
-33. Classificazione reazione
-34. Tipo entry
-35. Entry
-36. Stop Loss
-37. Motivo Stop Loss
-38. TP1
-39. TP2
-40. R:R su TP1
-41. R:R su TP2
-42. Score HTF
-43. Score LTF
-44. Score Trigger
-45. Score R:R / qualità operativa
-46. Score finale
-47. Hard veto attivi
-48. Decisione rischio
-49. Rischio monetario fisso
-50. Distanza Entry-SL
-51. Size calcolabile
-52. Dati mancanti per size
-53. Decisione finale
-54. Azione
-55. Motivo principale
-56. Validità temporale setup
-57. Cosa monitorare
-58. Trade preso
-59. Esito
-60. Note review
+41. Modalità
+42. Bias HTF
+43. Stato mercato HTF
+44. Zona primaria
+45. Zona secondaria
+46. Invalidazione strutturale
+47. Reazione LTF
+48. Classificazione reazione
+49. Tipo entry
+50. Entry
+51. Stop Loss
+52. Motivo Stop Loss
+53. TP1
+54. TP2
+55. R:R su TP1
+56. R:R su TP2
+57. Score HTF
+58. Score LTF
+59. Score Trigger
+60. Score R:R / qualità operativa
+61. Score finale
+62. Hard veto attivi
+63. Decisione rischio
+64. Rischio monetario fisso
+65. Distanza Entry-SL
+66. Size calcolabile
+67. Dati mancanti per size
+68. Decisione finale
+69. Azione
+70. Motivo principale
+71. Validità temporale setup
+72. Cosa monitorare
+73. Trade preso
+74. Esito
+75. Note review
 
 ## Colonne consigliate — Trade aperto
 

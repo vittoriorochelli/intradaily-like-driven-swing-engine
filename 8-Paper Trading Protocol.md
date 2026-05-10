@@ -74,7 +74,11 @@ Regole:
 - nessun hard veto attivo;
 - Decisione rischio = RISCHIO OK;
 - Entry, Stop Loss, TP1 e TP2 definiti;
-- R:R su TP2 >= 1:2;
+- R:R su TP2 >= 1:2 oppure R:R gestito esplicitamente validato secondo le regole del sistema;
+
+Nota:
+R:R gestito non significa piano condizionale.
+Un piano condizionale resta non simulabile finché una nuova analisi non produce TRADE VALIDO.
 - journal obbligatorio;
 - review post-trade obbligatoria.
 

@@ -262,21 +262,6 @@ Azione:
 Sintesi operativa:
 Rischio monetario fisso:
 Distanza Entry-SL:
-Conditional trade plan:
-Scenario vivo:
-Trade ora:
-Livello di attivazione:
-Evento richiesto:
-Trigger richiesto:
-Invalidazione scenario:
-Alert da impostare:
-Price discovery check:
-TP2 di estensione ammesso:
-Partial TP / BE plan:
-Gestione a TP1:
-Stop a BE dopo TP1:
-Runner verso TP2:
-Decisione piano condizionale:
 Size da calcolare:
 Size calcolabile:
 Decisione rischio:
@@ -343,6 +328,39 @@ Timeframe input:
 Screenshot HTF presente:
 Screenshot LTF presente:
 Materiale sufficiente:
+Indicator setup check:
+Indicatori utilizzabili per narrativa:
+Indicatori non verificabili:
+Affidabilità indicatori:
+Narrativa ricostruita:
+Setup già partito:
+Entry ancora disponibile:
+Entry già passata:
+Stato operativo da narrativa:
+Scenario evidence pack:
+Evidence pack affidabile:
+Scenario principale:
+Direzione scenario:
+Stato temporale scenario:
+Stato operativo scenario:
+Rilevanza operativa scenario:
+Scenario alternativi:
+Dati scenario mancanti:
+Conditional trade plan:
+Scenario vivo:
+Trade ora:
+Livello di attivazione:
+Evento richiesto:
+Trigger richiesto:
+Invalidazione scenario:
+Alert da impostare:
+Price discovery check:
+TP2 di estensione ammesso:
+Partial TP / BE plan:
+Gestione a TP1:
+Stop a BE dopo TP1:
+Runner verso TP2:
+Decisione piano condizionale:
 Modalità:
 Bias HTF:
 Stato mercato HTF:
@@ -378,8 +396,6 @@ Cosa monitorare:
 Trade preso:
 Esito:
 Note review:
-
-## Output journal trade aperto
 
 [JOURNAL AUTO-ENTRY - TRADE APERTO]
 
