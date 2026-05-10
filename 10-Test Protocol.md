@@ -42,6 +42,11 @@ Output atteso:
 - hard veto se presenti;
 - motivo principale;
 - nessuna entry forzata;
+- [INDICATOR SETUP CHECK];
+- [NARRATIVA RICOSTRUITA];
+- [SCENARIO EVIDENCE PACK];
+- [SCENARIO CANDIDATE] oppure NO_EDGE dichiarato;
+- [SCENARIO DISCOVERY OUTPUT];
 - journal auto-entry.
 
 Criterio di successo:
@@ -174,6 +179,8 @@ Un test è superato solo se:
 - esegue Narrativa da Screenshot;
 - esegue Scenario Evidence e Candidate Discovery;
 - produce Scenario Evidence Pack;
+- produce almeno un blocco `[SCENARIO CANDIDATE]` oppure dichiara chiaramente `NO_EDGE`;
+- produce `[SCENARIO DISCOVERY OUTPUT]`;
 - non classifica scenari senza evidenze;
 - distingue tra continuation, reversal candidate, balance rotation e no edge;
 - classifica correttamente scenario tardivo, futuro condizionale, attivo o scartato;
@@ -200,13 +207,13 @@ Un test fallisce se il sistema:
 - cerca un nuovo setup quando esiste un trade aperto;
 - sceglie il meno brutto in multi-asset;
 - suggerisce trading reale;
-- ignora dati mancanti.
+- ignora dati mancanti;
 - usa VWAP, AVWAP o Volume Profile senza verificarne il settaggio;
 - usa un AVWAP come conferma decisiva senza anchor visibile o dichiarato;
 - usa un Volume Profile come conferma decisiva senza range coerente o leggibile;
 - ricomincia la narrativa da zero ignorando la sequenza visibile nello screenshot;
 - scrive “attendere breakout” quando il breakout è già visibile;
-- non distingue tra breakout avvenuto, accettazione, retest, entry tardiva o setup invalidato.
+- non distingue tra breakout avvenuto, accettazione, retest, entry tardiva o setup invalidato;
 - classifica CONTINUATION solo perché il trend è forte;
 - classifica REVERSAL_CANDIDATE solo perché il prezzo è alto o basso;
 - classifica BALANCE_ROTATION senza balance/value area leggibile;
