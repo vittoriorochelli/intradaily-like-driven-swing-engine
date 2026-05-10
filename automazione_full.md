@@ -8,7 +8,7 @@ Questo è il file operativo principale del sistema.
 
 ## Regola di uso
 
-Nel sistema swing/multiday l’analisi viene eseguita principalmente tramite automazione full.  
+Nel sistema swing/multiday l’analisi viene eseguita principalmente tramite automazione full.
 Non è previsto il refresh frequente del trigger durante la giornata.
 
 ## Input ordinario richiesto
@@ -46,10 +46,13 @@ Il sistema swing usa principalmente automazione full.
 - Non inventare dati non visibili
 - Non inventare zone, livelli, indicatori o conferme non visibili
 - Le zone e i livelli devono essere prodotti dal sistema, non richiesti all’utente come input già tracciati
+- HTF deve produrre zona primaria e zona secondaria
+- LTF deve leggere solo la reazione del prezzo rispetto alla zona HTF
+- Trigger deve decidere solo: TRADE VALIDO / TRADE NON VALIDO / DA MONITORARE
 - Se uno screenshot è assegnato male, rimappalo
 - Se mancano dati essenziali, segnalalo
+- Se mancano indicatori necessari, fermati e chiedi integrazione mirata
 - Se gli screenshot non sono leggibili o mancano indicatori indispensabili, fermati al Preflight
-- Chiedere integrazione mirata quando necessario
 - Non forzare trade
 - Se il trade non è valido, dichiaralo chiaramente
 - Se il materiale è insufficiente, fermati al preflight
@@ -66,7 +69,7 @@ Bias strutturale:
 Timing LTF:
 Reazione nella zona:
 Trigger:
-Trade valido:
+Decisione trigger:
 Direzione:
 Entry:
 Stop:
