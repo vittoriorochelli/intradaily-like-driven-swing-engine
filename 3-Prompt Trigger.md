@@ -236,6 +236,14 @@ Hard veto rischio preliminare:
 - size presumibilmente impraticabile
 - spread/volatilità rendono lo stop non utilizzabile
 
+## Relazione con Risk e Position Sizing
+
+- il Trigger definisce Entry, Stop Loss tecnico, TP1, TP2 e R:R;
+- il Trigger non calcola la size definitiva;
+- la size viene gestita nel modulo Risk e Position Sizing;
+- il Trigger deve produrre livelli sufficientemente precisi per permettere il calcolo della distanza Entry-SL;
+- se Entry o Stop Loss non sono precisi, il trade deve essere DA MONITORARE o TRADE NON VALIDO.
+
 ## Decisione trigger
 
 Valori ammessi:
@@ -258,22 +266,6 @@ Stop tecnico: sì / no
 Stop troppo stretto: sì / no
 Stop troppo largo: sì / no
 TP1:
-Motivo TP1:
 TP2:
-Motivo TP2:
-Target realistico: sì / no
-R:R su TP1:
-R:R su TP2:
-Conferme:
-Hard veto:
-Score HTF:
-Score LTF:
-Score Trigger:
-Score R:R / qualità operativa:
-Score finale:
-Hard veto attivi:
-Decisione finale:
-Motivo principale:
-Decisione trigger:
-Azione:
-Sintesi operativa:
+Dati pronti per position sizing: sì / no
+Dati mancanti per position sizing:
