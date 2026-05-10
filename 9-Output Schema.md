@@ -249,9 +249,6 @@ Rischio residuo dopo BE:
 Trade valido senza TP2 statico:
 Motivo:
 
-Stop a BE dopo TP1:
-Runner verso TP2:
-Decisione piano condizionale:
 Indicatori utilizzabili per narrativa:
 Indicatori non verificabili:
 Affidabilità indicatori:
@@ -384,6 +381,11 @@ Trigger richiesto:
 Invalidazione scenario:
 Alert da impostare:
 Price discovery check: (non applicabile / condizionale / non verificabile / da rivalutare / sì / no)
+Esito price discovery/open space:
+Storico sufficiente:
+Screenshot aggiuntivo richiesto:
+Regola TP2 di estensione:
+Qualità TP2 di estensione:
 TP2 di estensione ammesso: (non applicabile / condizionale / non verificabile / da rivalutare / sì / no)
 Partial TP / BE plan: (non applicabile / condizionale / non verificabile / da rivalutare / sì / no)
 Gestione a TP1:
