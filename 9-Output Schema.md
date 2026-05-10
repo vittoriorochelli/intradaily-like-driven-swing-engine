@@ -190,6 +190,9 @@ Motivo:
 
 ## Output finale single asset
 
+Questi blocchi devono essere prodotti anche se il trade è TRADE NON VALIDO, quando sono richiamati da Trigger, Conditional Plan o Risk.
+
+
 [ASSET: ... | DECISIONE FINALE]
 
 Preflight:
@@ -216,10 +219,36 @@ Evento richiesto:
 Trigger richiesto:
 Invalidazione scenario:
 Alert da impostare:
-Price discovery check:
+[PRICE DISCOVERY / OPEN SPACE CHECK]
+Prezzo vicino a massimi/minimi visibili:
+Massimi/minimi superiori o inferiori visibili:
+Storico sufficiente:
+Price discovery confermata:
+Price discovery non verificabile:
+Open space condizionale:
+Screenshot aggiuntivo richiesto:
+TP1 strutturale:
+TP2 strutturale:
 TP2 di estensione ammesso:
-Partial TP / BE plan:
+Regola TP2 di estensione:
+Qualità TP2:
+Impatto su R:R:
+
+[PARTIAL TP / BREAK-EVEN PLAN]
+TP1 tecnico:
+TP1 raggiungibile:
+R:R su TP1:
 Gestione a TP1:
+Percentuale parziale:
+Stop a BE dopo TP1:
+Condizione per spostare SL a BE:
+Runner verso TP2:
+TP2 strutturale:
+TP2 di estensione:
+Rischio residuo dopo BE:
+Trade valido senza TP2 statico:
+Motivo:
+
 Stop a BE dopo TP1:
 Runner verso TP2:
 Decisione piano condizionale:
@@ -354,9 +383,9 @@ Evento richiesto:
 Trigger richiesto:
 Invalidazione scenario:
 Alert da impostare:
-Price discovery check:
-TP2 di estensione ammesso:
-Partial TP / BE plan:
+Price discovery check: (non applicabile / condizionale / non verificabile / da rivalutare / sì / no)
+TP2 di estensione ammesso: (non applicabile / condizionale / non verificabile / da rivalutare / sì / no)
+Partial TP / BE plan: (non applicabile / condizionale / non verificabile / da rivalutare / sì / no)
 Gestione a TP1:
 Stop a BE dopo TP1:
 Runner verso TP2:

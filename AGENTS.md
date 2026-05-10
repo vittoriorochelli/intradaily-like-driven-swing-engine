@@ -149,6 +149,12 @@ Score alto + hard veto attivo = TRADE NON VALIDO.
 - L’agente può proporre TP1 parziale e Stop Loss a BE solo come piano di gestione, non come sostituto di TP2 valido.
 - Un piano condizionale non è un paper trade.
 - Un piano condizionale non può diventare TRADE VALIDO senza nuova validazione di Trigger, Risk e hard veto.
+- L’agente non deve limitarsi a citare price discovery o TP2 mancante dentro il Conditional Trade Plan.
+- Se TP2 è mancante/non verificabile o il prezzo è vicino a massimi/minimi visibili, deve produrre il blocco autonomo [PRICE DISCOVERY / OPEN SPACE CHECK].
+- Se esiste TP1 tecnico o si valuta gestione a TP1, deve produrre il blocco autonomo [PARTIAL TP / BREAK-EVEN PLAN].
+- Se uno di questi blocchi è richiesto e manca, l’output è incompleto.
+- L’agente non deve dichiarare TEST SUPERATO se mancano blocchi obbligatori.
+- `TP2 di estensione ammesso: no` non deve essere usato quando la situazione corretta è `condizionale` o `non verificabile`.
 
 ## Output obbligatorio
 

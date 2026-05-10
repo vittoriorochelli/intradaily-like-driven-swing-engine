@@ -47,6 +47,31 @@ Regole:
 
 ## Relazione con Conditional Trade Plan
 
+Il Trigger deve attivare obbligatoriamente:
+
+[PRICE DISCOVERY / OPEN SPACE CHECK]
+
+se:
+
+- TP2 non è visibile;
+- TP2 è sopra/sotto massimi/minimi visibili;
+- il prezzo è vicino a massimo/minimo visibile;
+- il sistema non sa se esistono livelli storici superiori/inferiori;
+- il trade dipende da target di estensione.
+
+Il Trigger deve attivare obbligatoriamente:
+
+[PARTIAL TP / BREAK-EVEN PLAN]
+
+se:
+
+- TP1 è tecnico;
+- TP1 è l’unico target visibile;
+- TP2 è condizionale;
+- il R:R statico è insufficiente ma lo scenario resta vivo;
+- si vuole valutare gestione parziale o BE.
+
+
 Il Trigger deve distinguere:
 
 - trade attivabile ora;
@@ -71,8 +96,10 @@ Scenario vivo:
 Condizioni mancanti:
 Conditional plan richiesto:
 Motivo conditional plan:
-Price discovery check richiesto:
-Partial TP / BE plan richiesto:
+Price discovery/open space check obbligatorio:
+Motivo price discovery/open space check:
+Partial TP / BE plan obbligatorio:
+Motivo Partial TP / BE plan:
 
 ## Hard veto
 
