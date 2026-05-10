@@ -26,26 +26,30 @@ Il suo compito principale è proteggere l’utente da trade mediocri, forzature 
 Per asset singolo senza trade aperto:
 
 1. Preflight
-2. HTF
-3. LTF
-4. Trigger
-5. Scoring finale
-6. Risk e Position Sizing
-7. Decisione operativa
-8. Journal auto-entry
-9. Paper trading decision, se in modalità paper
+2. Indicator Setup Sanity Check
+3. Narrativa da Screenshot
+4. HTF
+5. LTF
+6. Trigger
+7. Scoring finale
+8. Risk e Position Sizing
+9. Decisione operativa
+10. Journal auto-entry
+11. Paper trading decision, se in modalità paper
 
 ## Ordine di esecuzione con trade aperto
 
 Se esiste un trade aperto:
 
 1. Preflight
-2. verifica HTF solo se necessario
-3. verifica LTF aggiornata
-4. Gestione posizione
-5. Risk e Position Sizing se stop, size o esposizione cambiano
-6. Decisione finale di gestione
-7. Journal auto-entry trade aperto
+2. Indicator Setup Sanity Check
+3. Narrativa da Screenshot
+4. verifica HTF solo se necessario
+5. verifica LTF aggiornata
+6. Gestione posizione
+7. Risk e Position Sizing se stop, size o esposizione cambiano
+8. Decisione finale di gestione
+9. Journal auto-entry trade aperto
 
 L’agente non deve cercare un nuovo setup sullo stesso asset se esiste già un trade aperto, salvo richiesta esplicita.
 
@@ -53,13 +57,17 @@ L’agente non deve cercare un nuovo setup sullo stesso asset se esiste già un 
 
 Per modalità multi-asset:
 
-1. Analizzare ogni asset con la sequenza standard.
-2. Produrre decisione operativa per ogni asset.
-3. Escludere asset con hard veto.
-4. Escludere asset con rischio non ok.
-5. Valutare correlazione.
-6. Produrre ranking.
-7. Se nessun asset è valido, dichiarare NESSUN TRADE.
+1. Per ogni asset eseguire Preflight.
+2. Per ogni asset eseguire Indicator Setup Sanity Check.
+3. Per ogni asset eseguire Narrativa da Screenshot.
+4. Per ogni asset eseguire la sequenza CASO A o CASO B.
+5. Produrre decisione operativa per ogni asset.
+6. Produrre journal auto-entry per ogni asset.
+7. Escludere asset con hard veto.
+8. Escludere asset con rischio non ok.
+9. Valutare correlazione.
+10. Produrre ranking.
+11. Se nessun asset è valido, dichiarare NESSUN TRADE.
 
 ## Gestione dati mancanti
 
@@ -133,3 +141,16 @@ Poi deve includere:
 ## Regola finale
 
 L’agente deve preferire perdere un trade valido piuttosto che validare un trade mediocre.
+
+
+## Uso da nuova chat
+
+Una chat nuova deve:
+
+- leggere `AGENTS.md`;
+- usare `automazione_full.md` come file operativo principale;
+- rispettare `9-Output Schema.md`;
+- non usare memoria esterna della chat;
+- ricostruire narrativa e livelli solo dagli screenshot;
+- dichiarare `mancante`, `non applicabile` o `da aggiornare` quando un dato non è disponibile;
+- fermarsi o classificare `DA MONITORARE` / `TRADE NON VALIDO` se mancano dati indispensabili.

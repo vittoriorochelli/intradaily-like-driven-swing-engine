@@ -43,41 +43,50 @@ Regole:
 5. Screenshot HTF presente
 6. Screenshot LTF presente
 7. Materiale sufficiente
-8. Modalità
-9. Bias HTF
-10. Stato mercato HTF
-11. Zona primaria
-12. Zona secondaria
-13. Invalidazione strutturale
-14. Reazione LTF
-15. Classificazione reazione
-16. Tipo entry
-17. Entry
-18. Stop Loss
-19. Motivo Stop Loss
-20. TP1
-21. TP2
-22. R:R su TP1
-23. R:R su TP2
-24. Score HTF
-25. Score LTF
-26. Score Trigger
-27. Score R:R / qualità operativa
-28. Score finale
-29. Hard veto attivi
-30. Decisione rischio
-31. Rischio monetario fisso
-32. Distanza Entry-SL
-33. Size calcolabile
-34. Dati mancanti per size
-35. Decisione finale
-36. Azione
-37. Motivo principale
-38. Validità temporale setup
-39. Cosa monitorare
-40. Trade preso
-41. Esito
-42. Note review
+8. Indicator setup check
+9. Indicatori utilizzabili per narrativa
+10. Indicatori non verificabili
+11. Affidabilità indicatori
+12. Narrativa ricostruita
+13. Setup già partito
+14. Entry ancora disponibile
+15. Entry già passata
+16. Stato operativo da narrativa
+17. Modalità
+18. Bias HTF
+19. Stato mercato HTF
+20. Zona primaria
+21. Zona secondaria
+22. Invalidazione strutturale
+23. Reazione LTF
+24. Classificazione reazione
+25. Tipo entry
+26. Entry
+27. Stop Loss
+28. Motivo Stop Loss
+29. TP1
+30. TP2
+31. R:R su TP1
+32. R:R su TP2
+33. Score HTF
+34. Score LTF
+35. Score Trigger
+36. Score R:R / qualità operativa
+37. Score finale
+38. Hard veto attivi
+39. Decisione rischio
+40. Rischio monetario fisso
+41. Distanza Entry-SL
+42. Size calcolabile
+43. Dati mancanti per size
+44. Decisione finale
+45. Azione
+46. Motivo principale
+47. Validità temporale setup
+48. Cosa monitorare
+49. Trade preso
+50. Esito
+51. Note review
 
 ## Colonne consigliate — Trade aperto
 
@@ -117,6 +126,15 @@ Ogni analisi deve registrare:
 - timeframe usati;
 - screenshot disponibili;
 - qualità del materiale;
+- indicator setup check;
+- indicatori utilizzabili per narrativa;
+- indicatori non verificabili;
+- affidabilità indicatori;
+- narrativa ricostruita;
+- setup già partito;
+- entry ancora disponibile;
+- entry già passata;
+- stato operativo da narrativa;
 - bias HTF;
 - stato mercato HTF;
 - zona primaria;
@@ -208,6 +226,15 @@ Timeframe input:
 Screenshot HTF presente:
 Screenshot LTF presente:
 Materiale sufficiente:
+Indicator setup check:
+Indicatori utilizzabili per narrativa:
+Indicatori non verificabili:
+Affidabilità indicatori:
+Narrativa ricostruita:
+Setup già partito:
+Entry ancora disponibile:
+Entry già passata:
+Stato operativo da narrativa:
 Modalità:
 Bias HTF:
 Stato mercato HTF:

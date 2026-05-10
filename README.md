@@ -49,6 +49,19 @@ L’uso ordinario avviene tramite:
 I singoli file modulari servono come componenti logiche interne.  
 Nel sistema swing/multiday non è previsto un refresh continuo del trigger durante la giornata.
 
+Per lanciare il sistema da una nuova chat:
+
+1. usare `automazione_full.md` come file operativo principale;
+2. rispettare `AGENTS.md`;
+3. rispettare `9-Output Schema.md`;
+4. eseguire sempre Preflight, Indicator Setup Sanity Check e Narrativa da Screenshot prima di HTF/LTF/Trigger;
+5. non usare memoria della chat;
+6. ricostruire la narrativa solo dagli screenshot.
+
+## Avvio da nuova chat
+
+La repository deve essere autosufficiente: una chat nuova deve poter eseguire il sistema senza conoscere le conversazioni precedenti.
+
 ## Journal e review
 
 - ogni analisi deve produrre un blocco journal-ready;

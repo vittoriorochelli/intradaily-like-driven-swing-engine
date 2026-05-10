@@ -169,7 +169,9 @@ Un test è superato solo se:
 - la risposta inizia con [DECISIONE OPERATIVA];
 - il sistema segue la sequenza corretta;
 - non inventa dati;
-- non salta Preflight;
+- esegue Preflight;
+- esegue Indicator Setup Sanity Check;
+- esegue Narrativa da Screenshot;
 - non salta Risk e Position Sizing;
 - applica hard veto;
 - restituisce score finale;
@@ -193,6 +195,12 @@ Un test fallisce se il sistema:
 - sceglie il meno brutto in multi-asset;
 - suggerisce trading reale;
 - ignora dati mancanti.
+- usa VWAP, AVWAP o Volume Profile senza verificarne il settaggio;
+- usa un AVWAP come conferma decisiva senza anchor visibile o dichiarato;
+- usa un Volume Profile come conferma decisiva senza range coerente o leggibile;
+- ricomincia la narrativa da zero ignorando la sequenza visibile nello screenshot;
+- scrive “attendere breakout” quando il breakout è già visibile;
+- non distingue tra breakout avvenuto, accettazione, retest, entry tardiva o setup invalidato.
 
 ## Registro problemi di test
 
@@ -236,7 +244,12 @@ Classificare ogni problema come:
 - output troppo lungo;
 - output troppo narrativo;
 - dato mancante non gestito;
-- hard veto ignorato.
+- hard veto ignorato;
+- errore Indicator Setup;
+- errore Narrativa;
+- uso improprio VWAP/AVWAP/VP;
+- narrativa non ricostruita;
+- narrativa incoerente con screenshot.
 
 ## Patch dopo test
 

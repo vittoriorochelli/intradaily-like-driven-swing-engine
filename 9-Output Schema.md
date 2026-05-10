@@ -83,6 +83,15 @@ Integrazione richiesta:
 [ASSET: ... | DECISIONE FINALE]
 
 Preflight:
+Indicator setup check:
+Narrativa ricostruita:
+Setup già partito:
+Entry ancora disponibile:
+Entry già passata:
+Stato operativo da narrativa:
+Indicatori utilizzabili per narrativa:
+Indicatori non verificabili:
+Affidabilità indicatori:
 Struttura HTF:
 Zona primaria:
 Zona secondaria:
