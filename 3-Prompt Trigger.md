@@ -4,43 +4,27 @@
 
 Decidere se il trade è realmente attivabile oppure no.
 
-Il trigger è separato dal timing.  
-Il timing dice se il prezzo sta reagendo bene.  
+Il trigger deve rispondere alla domanda:
+“Posso entrare davvero oppure no?”
+
+Il trigger è separato dal timing.
+Il timing dice se il prezzo sta reagendo bene.
 Il trigger dice se si può entrare.
 
 ## Condizioni minime
 
-Un trade può essere valido solo se:
+Un trade è valido solo se:
 
-- struttura HTF coerente
-- prezzo in zona sensata
+- HTF è leggibile e coerente
 - LTF conferma
-- trigger tecnico presente
-- stop tecnico chiaro
-- rapporto rischio/rendimento accettabile
-- nessun hard veto attivo
-
-## Differenza rispetto al trigger intraday
-
-Nel sistema swing il trigger non va refreshato molte volte al giorno.
-
-Il trigger swing è valido solo se:
-
-- HTF è chiaro
-- LTF conferma
+- prezzo è in zona sensata
+- trigger tecnico è presente
 - stop tecnico è ricavabile
-- rapporto rischio/rendimento è accettabile
-- indicatori necessari sono visibili
+- R:R è almeno accettabile
 - nessun hard veto è attivo
+- gli indicatori necessari alla decisione sono visibili
 
-Il trigger non può essere validato se mancano elementi indispensabili alla decisione, come:
-
-- struttura locale leggibile;
-- stop tecnico ricavabile;
-- rapporto rischio/rendimento stimabile;
-- VWAP se usata come conferma necessaria;
-- Volume Profile se usato come conferma necessaria;
-- dominance buyers/sellers se usata come conferma necessaria.
+Il trigger non può essere validato se mancano elementi indispensabili alla decisione.
 
 ## Hard veto
 
@@ -53,13 +37,21 @@ Bloccare il trade se:
 - trigger assente
 - stop tecnico troppo largo
 - R:R insufficiente
-- VWAP contrario
-- Volume Profile contrario
-- dominance buyers/sellers opposta
-- setup forzato
+- VWAP contraria se necessaria
+- Volume Profile contrario se necessario
+- dominance buyers/sellers opposta se necessaria
 - screenshot insufficienti
+- setup forzato
 
-## Output base
+## Decisione trigger
+
+Valori ammessi:
+
+- TRADE VALIDO
+- TRADE NON VALIDO
+- DA MONITORARE
+
+## Output trigger
 
 [ASSET: ... | TRIGGER]
 
@@ -71,12 +63,6 @@ Target:
 R:R:
 Conferme:
 Hard veto:
-Trade valido:
+Decisione trigger:
 Azione:
 Sintesi operativa:
-
-Valori ammessi per Trade valido:
-
-- TRADE VALIDO
-- TRADE NON VALIDO
-- DA MONITORARE

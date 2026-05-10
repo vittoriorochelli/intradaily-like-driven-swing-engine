@@ -9,7 +9,16 @@ Analizzare la struttura swing dell’asset sui timeframe superiori e identificar
 Il blocco HTF lavora principalmente sullo screenshot D1/H4.
 
 L’utente non deve fornire zone già tracciate.
-Il sistema deve ricavare zone supply/demand, livelli chiave, invalidazione e aree di monitoraggio.
+Il sistema deve ricavare in autonomia:
+
+- struttura swing;
+- trend/balance/transizione;
+- zone supply/demand;
+- zona primaria;
+- zona secondaria;
+- livelli chiave;
+- invalidazione strutturale;
+- aree di monitoraggio.
 
 Se lo screenshot D1/H4 non permette di leggere struttura o indicatori necessari, il sistema deve chiedere integrazione.
 
@@ -34,25 +43,39 @@ Deve dare più peso a:
 - livelli di valore
 - invalidazione strutturale
 
+## Classificazione mercato
+
+Valori ammessi:
+
+- trend rialzista
+- trend ribassista
+- balance
+- transizione
+- non leggibile
+
+## Lettura tecnica HTF
+
+- Wyckoff: accumulazione, distribuzione, markup, markdown, spring, upthrust/UTAD, trading range se visibili
+- Auction Market Theory: acceptance, rejection, balance, imbalance, value migration
+- Volume Profile: POC, VAH, VAL, HVN, LVN
+- AVWAP: usare solo se visibile e rilevante
+- dominance buyers/sellers: usare solo se visibile
+
 ## Cosa valutare
 
-- Trend, balance o transizione
-- Bias strutturale long, short o neutro
+- Stato mercato e bias strutturale
 - Swing principali
 - Zone supply/demand
+- Zona primaria e tipo zona primaria
+- Zona secondaria e tipo zona secondaria
 - Livelli chiave
 - Qualità delle zone
 - Fresh/tested
 - Reazione precedente alla zona
-- Struttura Wyckoff se visibile
-- Lettura AMT: acceptance, rejection, balance, imbalance
-- Volume Profile: POC, VAH, VAL, HVN, LVN
-- AVWAP se presente
-- Dominance buyers/sellers se visibile
 - Invalidazione strutturale
-- Zona primaria da monitorare
-- Zona secondaria da monitorare
-- Validità dell’asset fuori zona
+- Aree di monitoraggio
+- Asset valido fuori zona
+- Cosa osservare in LTF
 
 ## Non fare
 
@@ -61,7 +84,7 @@ Deve dare più peso a:
 - Non anticipare trigger
 - Non inventare dati non visibili
 
-## Output base
+## Output HTF obbligatorio
 
 [ASSET: ... | STRUTTURA HTF]
 
@@ -72,14 +95,15 @@ Wyckoff:
 AMT:
 Zone demand:
 Zone supply:
+Zona primaria:
+Tipo zona primaria:
+Zona secondaria:
+Tipo zona secondaria:
 Livelli chiave:
 Volume Profile:
 AVWAP:
 Dominance buyers/sellers:
-Zona primaria:
-Zona secondaria:
 Invalidazione strutturale:
-Aree di monitoraggio:
 Asset valido fuori zona:
 Cosa osservare in LTF:
 Qualità struttura:
