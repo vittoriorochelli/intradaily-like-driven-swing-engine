@@ -29,7 +29,8 @@ Il core system è organizzato in blocchi logici:
 10. `9-Output Schema.md`
 11. `10-Test Protocol.md`
 12. `11-Narrativa da Screenshot.md`
-13. `automazione_full.md`
+13. `12-Scenario Evidence e Candidate Discovery.md`
+14. `automazione_full.md`
 
 ## Agentic execution e output schema
 
@@ -98,6 +99,16 @@ La repository deve essere autosufficiente: una chat nuova deve poter eseguire il
 - serve a capire se breakout, retest o entry sono già avvenuti;
 - VWAP, AVWAP e Volume Profile possono essere usati solo se il loro settaggio è verificabile;
 - se la narrativa non è ricostruibile, il sistema deve chiedere screenshot più largo.
+
+## Scenario evidence e candidate discovery
+
+- il sistema classifica gli scenari solo dopo narrativa e HTF;
+- gli scenari sono evidence-driven;
+- continuation, reversal candidate e balance rotation richiedono dati solidi;
+- supply/demand, livelli di rotazione, liquidità, value, VP/VWAP/AVWAP verificabili sono parte dell’evidence pack;
+- se i dati sono insufficienti, lo scenario deve essere NO_EDGE o DA MONITORARE;
+- il candidate principale viene scelto per rilevanza operativa futura, non per forza storica del movimento;
+- TRADE_NOW nello scenario non significa TRADE VALIDO finale.
 
 
 ## Logica di rischio

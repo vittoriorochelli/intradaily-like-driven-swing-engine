@@ -31,12 +31,13 @@ Non è previsto il refresh frequente del trigger durante la giornata.
 2. Indicator Setup Sanity Check
 3. Narrativa da Screenshot
 4. HTF
-5. LTF
-6. Trigger
-7. Scoring finale
-8. Risk e Position Sizing
-9. Decisione finale
-10. Journal auto-entry
+5. Scenario Evidence e Candidate Discovery
+6. LTF
+7. Trigger
+8. Scoring finale
+9. Risk e Position Sizing
+10. Decisione finale
+11. Journal auto-entry
 
 ### CASO B — trade aperto
 
@@ -44,11 +45,12 @@ Non è previsto il refresh frequente del trigger durante la giornata.
 2. Indicator Setup Sanity Check
 3. Narrativa da Screenshot
 4. verifica HTF solo se necessario
-5. verifica LTF aggiornata
-6. Gestione Posizione
-7. Risk e Position Sizing se stop, size o esposizione cambiano
-8. Decisione finale di gestione
-9. Journal auto-entry trade aperto
+5. Scenario Evidence e Candidate Discovery se serve rivalutare lo scenario
+6. verifica LTF aggiornata
+7. Gestione Posizione
+8. Risk e Position Sizing se stop, size o esposizione cambiano
+9. Decisione finale di gestione
+10. Journal auto-entry trade aperto
 
 ### CASO C — multi-asset
 
@@ -56,6 +58,7 @@ Non è previsto il refresh frequente del trigger durante la giornata.
    - Preflight
    - Indicator Setup Sanity Check
    - Narrativa da Screenshot
+   - Scenario Evidence e Candidate Discovery
    - sequenza CASO A o CASO B
    - decisione operativa
    - journal auto-entry
@@ -88,6 +91,15 @@ Il sistema swing usa principalmente automazione full.
 - Non inventare zone, livelli, indicatori o conferme non visibili
 - Le zone e i livelli devono essere prodotti dal sistema, non richiesti all’utente come input già tracciati
 - HTF deve produrre zona primaria e zona secondaria
+- Dopo HTF, il sistema deve produrre Scenario Evidence e Candidate Discovery.
+- Gli scenari devono essere supportati da dati visibili: supply/demand, livelli di rotazione, liquidità, value, VP/VWAP/AVWAP se verificabili.
+- Non classificare CONTINUATION solo perché il trend è forte.
+- Non classificare REVERSAL_CANDIDATE solo perché il prezzo è alto o basso.
+- Non classificare BALANCE_ROTATION se non esiste una balance/value area leggibile.
+- Se l’evidence pack è insufficiente, classificare NO_EDGE o DA MONITORARE.
+- Il candidate principale deve essere scelto per rilevanza operativa dal decision point in avanti, non per forza storica del movimento.
+- Un setup TARDIVO non può diventare TRADE VALIDO senza nuovo trigger/retest.
+- TRADE_NOW nello scenario non significa TRADE VALIDO finale.
 - LTF deve leggere solo la reazione del prezzo rispetto alla zona HTF
 - Trigger deve decidere solo: TRADE VALIDO / TRADE NON VALIDO / DA MONITORARE
 - Il Trigger deve produrre Entry, SL, TP1, TP2 e R:R
@@ -245,6 +257,15 @@ Setup già partito:
 Entry ancora disponibile:
 Entry già passata:
 Stato operativo da narrativa:
+Scenario evidence pack:
+Evidence pack affidabile:
+Scenario principale:
+Direzione scenario:
+Stato temporale scenario:
+Stato operativo scenario:
+Rilevanza operativa scenario:
+Scenario alternativi:
+Dati scenario mancanti:
 Indicatori utilizzabili per narrativa:
 Indicatori non verificabili:
 Affidabilità indicatori:

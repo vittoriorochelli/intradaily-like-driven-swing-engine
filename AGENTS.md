@@ -29,13 +29,14 @@ Per asset singolo senza trade aperto:
 2. Indicator Setup Sanity Check
 3. Narrativa da Screenshot
 4. HTF
-5. LTF
-6. Trigger
-7. Scoring finale
-8. Risk e Position Sizing
-9. Decisione operativa
-10. Journal auto-entry
-11. Paper trading decision, se in modalità paper
+5. Scenario Evidence e Candidate Discovery
+6. LTF
+7. Trigger
+8. Scoring finale
+9. Risk e Position Sizing
+10. Decisione operativa
+11. Journal auto-entry
+12. Paper trading decision, se in modalità paper
 
 ## Ordine di esecuzione con trade aperto
 
@@ -45,11 +46,12 @@ Se esiste un trade aperto:
 2. Indicator Setup Sanity Check
 3. Narrativa da Screenshot
 4. verifica HTF solo se necessario
-5. verifica LTF aggiornata
-6. Gestione posizione
-7. Risk e Position Sizing se stop, size o esposizione cambiano
-8. Decisione finale di gestione
-9. Journal auto-entry trade aperto
+5. Scenario Evidence e Candidate Discovery se serve rivalutare lo scenario
+6. verifica LTF aggiornata
+7. Gestione posizione
+8. Risk e Position Sizing se stop, size o esposizione cambiano
+9. Decisione finale di gestione
+10. Journal auto-entry trade aperto
 
 L’agente non deve cercare un nuovo setup sullo stesso asset se esiste già un trade aperto, salvo richiesta esplicita.
 
@@ -60,14 +62,15 @@ Per modalità multi-asset:
 1. Per ogni asset eseguire Preflight.
 2. Per ogni asset eseguire Indicator Setup Sanity Check.
 3. Per ogni asset eseguire Narrativa da Screenshot.
-4. Per ogni asset eseguire la sequenza CASO A o CASO B.
-5. Produrre decisione operativa per ogni asset.
-6. Produrre journal auto-entry per ogni asset.
-7. Escludere asset con hard veto.
-8. Escludere asset con rischio non ok.
-9. Valutare correlazione.
-10. Produrre ranking.
-11. Se nessun asset è valido, dichiarare NESSUN TRADE.
+4. Per ogni asset eseguire HTF e Scenario Evidence e Candidate Discovery.
+5. Per ogni asset eseguire la sequenza CASO A o CASO B.
+6. Produrre decisione operativa per ogni asset.
+7. Produrre journal auto-entry per ogni asset.
+8. Escludere asset con hard veto.
+9. Escludere asset con rischio non ok.
+10. Valutare correlazione.
+11. Produrre ranking.
+12. Se nessun asset è valido, dichiarare NESSUN TRADE.
 
 ## Gestione dati mancanti
 
@@ -124,6 +127,17 @@ Score alto + hard veto attivo = TRADE NON VALIDO.
 - L’agente non deve usare memoria implicita della chat al posto degli screenshot.
 - Se il prezzo ha già fatto il movimento atteso, l’agente deve aggiornare la lettura: breakout avvenuto, retest mancante, entry tardiva o setup invalidato.
 - La narrativa non sostituisce HTF, LTF, Trigger o Risk.
+
+## Scenario Evidence e Candidate Discovery
+
+- L’agente deve classificare gli scenari solo dopo Preflight, Indicator Setup, Narrativa e HTF.
+- Gli scenari devono essere evidence-driven.
+- L’agente non deve inventare continuation, reversal o balance rotation se mancano dati solidi.
+- Ogni scenario deve dichiarare evidenze a favore, evidenze contro e dati mancanti.
+- Il candidate principale va scelto per rilevanza operativa da adesso in avanti.
+- Un setup già partito o esteso deve essere classificato TARDIVO o WAIT_FOR_RETEST, non TRADE_NOW.
+- TRADE_NOW nello scenario non significa TRADE VALIDO finale.
+- Se nessuno scenario è supportato da dati sufficienti, usare NO_EDGE.
 
 ## Output obbligatorio
 
