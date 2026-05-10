@@ -76,6 +76,15 @@ Non deve fare micro-management.
 Se il trade perde qualità, il sistema deve segnalarlo anche se stop loss o take profit non sono stati toccati.
 Se il trade resta tecnicamente valido, il sistema deve evitare uscite premature.
 
+
+## Modifica stop e rischio
+
+- se durante la gestione lo Stop Loss viene modificato, il sistema deve rivalutare il rischio;
+- se lo stop viene allargato, la modifica deve essere trattata come critica;
+- lo stop non deve essere allargato per evitare una perdita;
+- se lo stop viene stretto, il sistema deve verificare che non diventi troppo stretto rispetto al rumore;
+- eventuali aggiunte di posizione richiedono nuova validazione del rischio.
+
 ## Output obbligatorio
 
 [ASSET: ... | GESTIONE POSIZIONE]

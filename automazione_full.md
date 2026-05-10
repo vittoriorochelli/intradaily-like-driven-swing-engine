@@ -25,7 +25,8 @@ Non è previsto il refresh frequente del trigger durante la giornata.
 3. LTF
 4. Trigger
 5. Scoring finale
-6. Decisione finale
+6. Risk e Position Sizing
+7. Decisione finale
 
 ### CASO B — trade aperto
 
@@ -33,7 +34,8 @@ Non è previsto il refresh frequente del trigger durante la giornata.
 2. verifica HTF solo se necessario
 3. verifica LTF aggiornata
 4. Gestione Posizione
-5. Decisione finale di gestione
+5. Risk e Position Sizing se stop, size o esposizione cambiano
+6. Decisione finale di gestione
 
 ## Regola di priorità con trade aperto
 
@@ -69,6 +71,11 @@ Il sistema swing usa principalmente automazione full.
 - La decisione finale non può essere TRADE VALIDO senza TP2 realistico almeno a 1:2
 - Se Entry, SL o TP sono incerti, il sistema deve classificare DA MONITORARE o TRADE NON VALIDO
 - La size non viene decisa in questa fase: verrà tarata dopo sul rischio monetario fisso
+- La decisione finale non può essere TRADE VALIDO se Decisione rischio = RISCHIO NON OK
+- Se Decisione rischio = DATI RISCHIO MANCANTI, il sistema deve classificare DA MONITORARE o TRADE NON VALIDO
+- Il sistema non deve inventare pip value, tick value, lotto minimo o margine
+- Se mancano dati broker necessari al calcolo della size, deve chiederli
+- La size viene calcolata solo dopo Entry e Stop Loss tecnico
 - Se uno screenshot è assegnato male, rimappalo
 - Se mancano dati essenziali, segnalalo
 - Se mancano indicatori necessari, fermati e chiedi integrazione mirata
@@ -116,6 +123,13 @@ Motivo principale:
 Qualità setup:
 Azione:
 Sintesi operativa:
+Rischio monetario fisso:
+Distanza Entry-SL:
+Size da calcolare:
+Size calcolabile:
+Decisione rischio:
+Hard veto rischio:
+Dati mancanti per size:
 
 Valori ammessi per Azione:
 
