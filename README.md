@@ -117,3 +117,13 @@ Il sistema dovrà progressivamente integrare:
 
 Il contesto macro non fa parte del core system in questa fase.  
 Potrà essere aggiunto in futuro come modulo opzionale.
+
+## Scoring e hard veto
+
+Il sistema usa uno score finale da 0 a 100.
+
+Il trade è valido solo sopra soglia e senza hard veto.
+
+Un hard veto blocca sempre il trade.
+
+Lo scoring serve a impedire setup mediocri e forzature discrezionali.

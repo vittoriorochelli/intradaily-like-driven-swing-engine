@@ -24,7 +24,8 @@ Non è previsto il refresh frequente del trigger durante la giornata.
 2. HTF
 3. LTF
 4. Trigger
-5. Decisione finale
+5. Scoring finale
+6. Decisione finale
 
 ### CASO B — trade aperto
 
@@ -57,6 +58,13 @@ Il sistema swing usa principalmente automazione full.
 - LTF deve leggere solo la reazione del prezzo rispetto alla zona HTF
 - Trigger deve decidere solo: TRADE VALIDO / TRADE NON VALIDO / DA MONITORARE
 - Il Trigger deve produrre Entry, SL, TP1, TP2 e R:R
+- Il sistema deve sempre restituire lo score finale
+- Il sistema deve sempre elencare gli hard veto attivi
+- Se esiste un hard veto attivo, la decisione finale deve essere TRADE NON VALIDO
+- Se il materiale non è leggibile, la decisione finale deve essere ASSET NON LEGGIBILE
+- Se lo score è 60-74 senza hard veto, la decisione deve essere DA MONITORARE
+- Se lo score è >= 75 senza hard veto, la decisione può essere TRADE VALIDO
+- Se lo score è < 60, la decisione deve essere TRADE NON VALIDO
 - La decisione finale non può essere TRADE VALIDO senza SL tecnico
 - La decisione finale non può essere TRADE VALIDO senza TP2 realistico almeno a 1:2
 - Se Entry, SL o TP sono incerti, il sistema deve classificare DA MONITORARE o TRADE NON VALIDO
@@ -97,6 +105,14 @@ R:R su TP2:
 Target realistico:
 Journal-ready fields:
 Hard veto:
+Score HTF:
+Score LTF:
+Score Trigger:
+Score R:R / qualità operativa:
+Score finale:
+Hard veto attivi:
+Decisione finale:
+Motivo principale:
 Qualità setup:
 Azione:
 Sintesi operativa:
