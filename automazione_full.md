@@ -6,6 +6,13 @@ Eseguire l’intera analisi swing/multiday in un’unica sequenza.
 
 Questo è il file operativo principale del sistema.
 
+## File di controllo agentico
+
+L’esecuzione deve rispettare:
+
+- `AGENTS.md`
+- `9-Output Schema.md`
+
 ## Regola di uso
 
 Nel sistema swing/multiday l’analisi viene eseguita principalmente tramite automazione full.
@@ -64,6 +71,8 @@ Il sistema swing usa principalmente automazione full.
 ## Regole generali
 
 - Leggi gli screenshot forniti
+- L’agente deve rispettare `AGENTS.md`.
+- L’output deve rispettare `9-Output Schema.md`.
 - Non mescolare timeframe
 - Non inventare dati non visibili
 - Non inventare zone, livelli, indicatori o conferme non visibili
@@ -87,6 +96,7 @@ Il sistema swing usa principalmente automazione full.
 - Se Decisione rischio = DATI RISCHIO MANCANTI, il sistema deve classificare DA MONITORARE o TRADE NON VALIDO
 - Il sistema non deve inventare pip value, tick value, lotto minimo o margine
 - Se mancano dati broker necessari al calcolo della size, deve chiederli
+- Se manca un dato indispensabile, chiedere una sola integrazione mirata.
 - La size viene calcolata solo dopo Entry e Stop Loss tecnico
 - Se uno screenshot è assegnato male, rimappalo
 - Se mancano dati essenziali, segnalalo
@@ -100,6 +110,8 @@ Il sistema swing usa principalmente automazione full.
 - Il journal deve essere generato anche per TRADE NON VALIDO, DA MONITORARE e ASSET NON LEGGIBILE
 - Il journal non deve essere narrativo: deve essere sintetico, confrontabile e copiabile in tabella
 - Se mancano dati, il journal deve riportare il dato come `mancante`, `non applicabile` o `da aggiornare`, senza inventare nulla
+- Se un campo non è disponibile, usare `mancante`, `non applicabile` o `da aggiornare`.
+- L’output deve essere operativo prima che narrativo.
 - In modalità multi-asset, non scegliere mai un trade solo perché è il migliore tra setup deboli.
 - Gli asset con hard veto non possono essere promossi.
 - Se nessun asset è valido, la decisione finale deve essere NESSUN TRADE.
