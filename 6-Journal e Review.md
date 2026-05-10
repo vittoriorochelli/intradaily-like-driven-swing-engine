@@ -20,6 +20,93 @@ Il journal deve essere il più automatizzato possibile.
 L’utente non deve ricostruire manualmente l’analisi.
 Il sistema deve produrre automaticamente un blocco journal-ready a partire dall’output di `automazione_full.md`.
 
+## Formato tabellare / CSV-friendly
+
+Il journal deve poter essere copiato in futuro in Excel, Google Sheets, CSV o database.
+
+Regole:
+
+- un campo = una colonna;
+- mantenere sempre lo stesso ordine dei campi;
+- se un dato manca, usare `mancante`;
+- se un dato non è applicabile, usare `non applicabile`;
+- se un dato verrà aggiornato dopo, usare `da aggiornare`;
+- evitare testo lungo nei campi tabellari;
+- usare note sintetiche.
+
+## Colonne consigliate — Setup
+
+1. Data analisi
+2. Ora analisi
+3. Asset
+4. Timeframe input
+5. Screenshot HTF presente
+6. Screenshot LTF presente
+7. Materiale sufficiente
+8. Modalità
+9. Bias HTF
+10. Stato mercato HTF
+11. Zona primaria
+12. Zona secondaria
+13. Invalidazione strutturale
+14. Reazione LTF
+15. Classificazione reazione
+16. Tipo entry
+17. Entry
+18. Stop Loss
+19. Motivo Stop Loss
+20. TP1
+21. TP2
+22. R:R su TP1
+23. R:R su TP2
+24. Score HTF
+25. Score LTF
+26. Score Trigger
+27. Score R:R / qualità operativa
+28. Score finale
+29. Hard veto attivi
+30. Decisione rischio
+31. Rischio monetario fisso
+32. Distanza Entry-SL
+33. Size calcolabile
+34. Dati mancanti per size
+35. Decisione finale
+36. Azione
+37. Motivo principale
+38. Validità temporale setup
+39. Cosa monitorare
+40. Trade preso
+41. Esito
+42. Note review
+
+## Colonne consigliate — Trade aperto
+
+1. Data analisi
+2. Ora analisi
+3. Asset
+4. Direzione trade
+5. Entry
+6. Stop attuale
+7. Target
+8. Stato trade
+9. Deterioramento
+10. Motivo deterioramento
+11. Azione consigliata
+12. Nuovo stop
+13. Gestione profitto
+14. Uscita anticipata
+15. Decisione rischio
+16. Hard veto rischio
+17. Azione finale
+18. Motivo
+19. Esito aggiornato
+20. Note review
+
+## Regola anti-overhead
+
+Il journal deve ridurre il lavoro manuale, non aumentarlo.
+L’utente deve poter copiare il blocco journal e incollarlo in una tabella senza riscrivere l’analisi.
+
 ## Cosa registrare sempre
 
 Ogni analisi deve registrare:

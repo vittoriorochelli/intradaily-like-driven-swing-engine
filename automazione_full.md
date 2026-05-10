@@ -27,6 +27,7 @@ Non è previsto il refresh frequente del trigger durante la giornata.
 5. Scoring finale
 6. Risk e Position Sizing
 7. Decisione finale
+8. Journal auto-entry
 
 ### CASO B — trade aperto
 
@@ -36,6 +37,7 @@ Non è previsto il refresh frequente del trigger durante la giornata.
 4. Gestione Posizione
 5. Risk e Position Sizing se stop, size o esposizione cambiano
 6. Decisione finale di gestione
+7. Journal auto-entry trade aperto
 
 ## Regola di priorità con trade aperto
 
@@ -83,6 +85,10 @@ Il sistema swing usa principalmente automazione full.
 - Non forzare trade
 - Se il trade non è valido, dichiaralo chiaramente
 - Se il materiale è insufficiente, fermati al preflight
+- Il sistema deve sempre generare un blocco journal auto-entry
+- Il journal deve essere generato anche per TRADE NON VALIDO, DA MONITORARE e ASSET NON LEGGIBILE
+- Il journal non deve essere narrativo: deve essere sintetico, confrontabile e copiabile in tabella
+- Se mancano dati, il journal deve riportare il dato come `mancante`, `non applicabile` o `da aggiornare`, senza inventare nulla
 
 ## Output finale
 
@@ -110,7 +116,7 @@ Motivo TP2:
 R:R su TP1:
 R:R su TP2:
 Target realistico:
-Journal-ready fields:
+Journal auto-entry generata: sì / no
 Hard veto:
 Score HTF:
 Score LTF:
@@ -241,3 +247,14 @@ Esito aggiornato:
 Note review:
 
 I campi `Trade preso`, `Esito`, `Esito aggiornato` e `Note review` possono restare vuoti o “da aggiornare” al momento dell’analisi iniziale.
+
+## Regole journal auto-entry
+
+- ogni esecuzione di `automazione_full.md` deve terminare con un blocco journal;
+- il blocco journal deve essere coerente con la decisione finale;
+- se la decisione è TRADE VALIDO, compilare i campi operativi disponibili;
+- se la decisione è TRADE NON VALIDO, compilare soprattutto hard veto, score, motivo principale e cosa mancava;
+- se la decisione è DA MONITORARE, compilare cosa monitorare e validità temporale;
+- se la decisione è ASSET NON LEGGIBILE, compilare motivo e integrazione richiesta;
+- se esiste trade aperto, usare il blocco `[JOURNAL AUTO-ENTRY - TRADE APERTO]`;
+- non inventare dati mancanti.
