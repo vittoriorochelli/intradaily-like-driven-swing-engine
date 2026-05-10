@@ -25,6 +25,20 @@ Non è previsto il refresh frequente del trigger durante la giornata.
 5. Gestione posizione, solo se esiste trade aperto
 6. Decisione finale
 
+## Logica intraday-like
+
+L’automazione full applica in sequenza la stessa logica mentale dell’intraday, ma su timeframe swing:
+
+Preflight
+→ HTF D1/H4
+→ LTF H4/H1
+→ Trigger
+→ Gestione se trade aperto
+→ Decisione finale
+
+Non esistono refresh frequenti del trigger.
+Il sistema swing usa principalmente automazione full.
+
 ## Regole generali
 
 - Leggi gli screenshot forniti

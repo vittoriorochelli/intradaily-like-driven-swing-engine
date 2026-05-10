@@ -22,6 +22,23 @@ Se lo zoom non consente di leggere la reazione, deve chiedere screenshot più ad
 - H4: reazione ampia
 - H1: timing principale
 
+## Derivazione intraday → LTF swing
+
+Il blocco LTF swing eredita la funzione del M5 intraday, ma lavora su H4/H1.
+
+Deve concentrarsi su:
+
+- reazione nella zona HTF
+- rejection
+- absorption
+- acceptance
+- false break
+- retest
+- micro-BOS/CHOCH
+- VWAP se necessaria
+- Volume Profile locale se necessario
+- dominance buyers/sellers se necessaria
+
 ## Cosa valutare
 
 - Prezzo dentro o fuori dalla zona HTF
