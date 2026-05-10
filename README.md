@@ -24,7 +24,8 @@ Il core system è organizzato in blocchi logici:
 5. `4-Gestione Posizione.md`
 6. `5-Risk e Position Sizing.md`
 7. `6-Journal e Review.md`
-8. `automazione_full.md`
+8. `7-Multi Asset Ranking.md`
+9. `automazione_full.md`
 
 ## Uso operativo
 
@@ -40,6 +41,15 @@ Nel sistema swing/multiday non è previsto un refresh continuo del trigger duran
 - ogni analisi deve produrre un blocco journal-ready;
 - il journal registra anche trade non validi, setup da monitorare e asset non leggibili;
 - la review serve a misurare disciplina, qualità del processo e capacità del sistema di evitare trade mediocri.
+
+## Multi-asset ranking
+
+- il sistema può confrontare più asset;
+- ogni asset viene prima analizzato con la logica standard;
+- il ranking non deve scegliere per forza un trade;
+- gli asset con hard veto non possono essere promossi;
+- il sistema deve considerare correlazione e rischio aggregato;
+- se nessun asset è valido, la decisione corretta è NESSUN TRADE.
 
 
 ## Logica di rischio

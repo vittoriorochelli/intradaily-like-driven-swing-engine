@@ -39,6 +39,16 @@ Non è previsto il refresh frequente del trigger durante la giornata.
 6. Decisione finale di gestione
 7. Journal auto-entry trade aperto
 
+### CASO C — multi-asset
+
+1. Eseguire CASO A o CASO B per ogni asset
+2. Produrre decisione operativa per ogni asset
+3. Escludere asset con hard veto o rischio non ok
+4. Confrontare gli asset rimanenti
+5. Valutare correlazione e rischio aggregato
+6. Produrre ranking multi-asset
+7. Generare journal auto-entry per ogni asset
+
 ## Regola di priorità con trade aperto
 
 Se esiste un trade aperto, il sistema non deve cercare un nuovo setup sullo stesso asset, salvo richiesta esplicita.
@@ -90,6 +100,11 @@ Il sistema swing usa principalmente automazione full.
 - Il journal deve essere generato anche per TRADE NON VALIDO, DA MONITORARE e ASSET NON LEGGIBILE
 - Il journal non deve essere narrativo: deve essere sintetico, confrontabile e copiabile in tabella
 - Se mancano dati, il journal deve riportare il dato come `mancante`, `non applicabile` o `da aggiornare`, senza inventare nulla
+- In modalità multi-asset, non scegliere mai un trade solo perché è il migliore tra setup deboli.
+- Gli asset con hard veto non possono essere promossi.
+- Se nessun asset è valido, la decisione finale deve essere NESSUN TRADE.
+- Se gli asset migliori sono troppo correlati, preferire un solo setup o classificare gli altri come da monitorare.
+- Il ranking deve proteggere dall’overtrading.
 
 ## Output operativo prioritario
 
@@ -129,6 +144,43 @@ Regole:
 - Il blocco deve essere sintetico: niente spiegazioni lunghe.
 - Il dettaglio completo deve restare nelle sezioni successive.
 - Il journal auto-entry deve restare sempre generato.
+
+## Modalità multi-asset
+
+Il sistema può essere usato anche su più asset.
+
+In modalità multi-asset:
+
+- ogni asset deve ricevere la stessa sequenza di analisi;
+- ogni asset deve produrre il proprio `[DECISIONE OPERATIVA]`;
+- ogni asset deve produrre il proprio score;
+- ogni asset deve produrre hard veto attivi;
+- ogni asset deve produrre decisione rischio;
+- ogni asset deve produrre journal auto-entry;
+- solo dopo, il sistema può produrre il ranking multi-asset;
+- il ranking deve usare `7-Multi Asset Ranking.md`.
+
+[MULTI-ASSET DECISION]
+
+Asset analizzati:
+Asset validi:
+Asset da monitorare:
+Asset non validi:
+Asset non leggibili:
+Miglior setup:
+Secondo setup:
+Rischio correlazione:
+Decisione finale:
+Azione immediata:
+Prossimo passo:
+
+Valori ammessi per Decisione finale:
+
+- OPERARE MIGLIOR SETUP
+- NESSUN TRADE
+- MONITORARE
+- RICHIEDERE INTEGRAZIONI
+- GESTIRE TRADE APERTO
 
 ## Output finale
 
