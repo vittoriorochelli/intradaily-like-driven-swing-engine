@@ -28,7 +28,8 @@ Il core system è organizzato in blocchi logici:
 9. `8-Paper Trading Protocol.md`
 10. `9-Output Schema.md`
 11. `10-Test Protocol.md`
-12. `automazione_full.md`
+12. `11-Narrativa da Screenshot.md`
+13. `automazione_full.md`
 
 ## Agentic execution e output schema
 
@@ -76,6 +77,14 @@ Nel sistema swing/multiday non è previsto un refresh continuo del trigger duran
 - il test protocol serve a trovare errori, ambiguità e output inutilizzabili;
 - il sistema deve superare i test minimi prima di essere usato in osservazione;
 - eventuali problemi bloccanti devono essere corretti prima di procedere.
+
+## Narrativa da screenshot
+
+- il sistema ricostruisce la sequenza visibile del prezzo partendo dagli screenshot;
+- la narrativa non sostituisce HTF, LTF, Trigger o Risk;
+- serve a capire se breakout, retest o entry sono già avvenuti;
+- VWAP, AVWAP e Volume Profile possono essere usati solo se il loro settaggio è verificabile;
+- se la narrativa non è ricostruibile, il sistema deve chiedere screenshot più largo.
 
 
 ## Logica di rischio

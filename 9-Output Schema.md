@@ -52,6 +52,32 @@ Indicatori solo di supporto:
 Indicatori non utilizzabili:
 Impatto sulla decisione:
 
+## Output narrativa da screenshot
+
+[NARRATIVA RICOSTRUITA]
+
+Movimento precedente:
+Struttura costruita:
+Area chiave più vecchia:
+Impulso principale:
+Pullback visibile:
+Breakout visibile:
+Accettazione visibile:
+Retest visibile:
+Fallimento visibile:
+Prezzo attuale rispetto alla narrativa:
+Setup già partito:
+Entry ancora disponibile:
+Entry già passata:
+Stato operativo ricavato dal grafico:
+Narrativa affidabile:
+Indicatori usati nella narrativa:
+Indicatori non verificabili:
+Indicatori ignorati:
+Narrativa basata principalmente su:
+Affidabilità indicatori:
+Integrazione richiesta:
+
 ## Output finale single asset
 
 [ASSET: ... | DECISIONE FINALE]

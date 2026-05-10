@@ -109,6 +109,14 @@ Score alto + hard veto attivo = TRADE NON VALIDO.
 - Se un indicatore è visibile ma non verificabile, deve dichiararlo.
 - Se la conferma dell’indicatore è necessaria per validare un trade, ma l’indicatore non è verificabile, il trade deve essere `DA MONITORARE` o `TRADE NON VALIDO`.
 
+## Narrativa da screenshot
+
+- L’agente deve ricostruire la narrativa visibile del prezzo dopo Preflight e Indicator Setup Sanity Check.
+- La narrativa deve usare solo dati visibili negli screenshot.
+- L’agente non deve usare memoria implicita della chat al posto degli screenshot.
+- Se il prezzo ha già fatto il movimento atteso, l’agente deve aggiornare la lettura: breakout avvenuto, retest mancante, entry tardiva o setup invalidato.
+- La narrativa non sostituisce HTF, LTF, Trigger o Risk.
+
 ## Output obbligatorio
 
 Ogni risposta operativa deve iniziare con:
