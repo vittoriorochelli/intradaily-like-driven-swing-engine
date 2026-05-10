@@ -41,16 +41,24 @@ Non è previsto il refresh frequente del trigger durante la giornata.
 ### CASO B — trade aperto
 
 1. Preflight
-2. verifica HTF solo se necessario
-3. verifica LTF aggiornata
-4. Gestione Posizione
-5. Risk e Position Sizing se stop, size o esposizione cambiano
-6. Decisione finale di gestione
-7. Journal auto-entry trade aperto
+2. Indicator Setup Sanity Check
+3. Narrativa da Screenshot
+4. verifica HTF solo se necessario
+5. verifica LTF aggiornata
+6. Gestione Posizione
+7. Risk e Position Sizing se stop, size o esposizione cambiano
+8. Decisione finale di gestione
+9. Journal auto-entry trade aperto
 
 ### CASO C — multi-asset
 
-1. Eseguire CASO A o CASO B per ogni asset
+1. Ogni asset deve eseguire:
+   - Preflight
+   - Indicator Setup Sanity Check
+   - Narrativa da Screenshot
+   - sequenza CASO A o CASO B
+   - decisione operativa
+   - journal auto-entry
 2. Produrre decisione operativa per ogni asset
 3. Escludere asset con hard veto o rischio non ok
 4. Confrontare gli asset rimanenti
@@ -232,6 +240,11 @@ Errore di processo se ignorato:
 
 Preflight:
 Indicator setup check:
+Narrativa ricostruita:
+Setup già partito:
+Entry ancora disponibile:
+Entry già passata:
+Stato operativo da narrativa:
 Indicatori utilizzabili per narrativa:
 Indicatori non verificabili:
 Affidabilità indicatori:
