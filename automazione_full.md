@@ -105,6 +105,10 @@ Il sistema swing usa principalmente automazione full.
 - Se nessun asset è valido, la decisione finale deve essere NESSUN TRADE.
 - Se gli asset migliori sono troppo correlati, preferire un solo setup o classificare gli altri come da monitorare.
 - Il ranking deve proteggere dall’overtrading.
+- Il sistema non deve suggerire trading reale se non è stata completata la fase di paper trading.
+- In fase di validazione, ogni TRADE VALIDO deve essere trattato come candidato paper trade, non come ordine reale.
+- Ogni paper trade deve produrre journal auto-entry e review successiva.
+- Se l’utente forza un trade fuori sistema, va classificato come errore di processo.
 
 ## Output operativo prioritario
 
@@ -181,6 +185,27 @@ Valori ammessi per Decisione finale:
 - MONITORARE
 - RICHIEDERE INTEGRAZIONI
 - GESTIRE TRADE APERTO
+
+## Modalità paper trading
+
+In modalità paper trading:
+
+- il sistema non invia ordini reali;
+- TRADE VALIDO significa candidato paper trade;
+- ogni simulazione deve rispettare entry, Stop Loss, TP, rischio e hard veto;
+- ogni simulazione deve essere registrata nel journal;
+- ogni trade deve essere rivisto tramite `6-Journal e Review.md`;
+- le metriche aggregate devono essere valutate secondo `8-Paper Trading Protocol.md`.
+
+[PAPER TRADING DECISION]
+
+Paper mode:
+Trade simulabile:
+Motivo:
+Condizioni da rispettare:
+Journal richiesto:
+Review richiesta:
+Errore di processo se ignorato:
 
 ## Output finale
 
