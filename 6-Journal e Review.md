@@ -61,6 +61,21 @@ Regole:
 23. Rilevanza operativa scenario
 24. Scenario alternativi
 25. Dati scenario mancanti
+26. Conditional trade plan
+27. Scenario vivo
+28. Trade ora
+29. Livello di attivazione
+30. Evento richiesto
+31. Trigger richiesto
+32. Invalidazione scenario
+33. Alert da impostare
+34. Price discovery check
+35. TP2 di estensione ammesso
+36. Partial TP / BE plan
+37. Gestione a TP1
+38. Stop a BE dopo TP1
+39. Runner verso TP2
+40. Decisione piano condizionale
 26. Modalità
 27. Bias HTF
 28. Stato mercato HTF
@@ -153,6 +168,21 @@ Ogni analisi deve registrare:
 - rilevanza operativa scenario;
 - scenario alternativi;
 - dati scenario mancanti;
+- conditional trade plan;
+- scenario vivo;
+- trade ora;
+- livello di attivazione;
+- evento richiesto;
+- trigger richiesto;
+- invalidazione scenario;
+- alert da impostare;
+- price discovery check;
+- TP2 di estensione ammesso;
+- partial TP / BE plan;
+- gestione a TP1;
+- stop a BE dopo TP1;
+- runner verso TP2;
+- decisione piano condizionale;
 - bias HTF;
 - stato mercato HTF;
 - zona primaria;
@@ -264,6 +294,21 @@ Stato operativo scenario:
 Rilevanza operativa scenario:
 Scenario alternativi:
 Dati scenario mancanti:
+Conditional trade plan:
+Scenario vivo:
+Trade ora:
+Livello di attivazione:
+Evento richiesto:
+Trigger richiesto:
+Invalidazione scenario:
+Alert da impostare:
+Price discovery check:
+TP2 di estensione ammesso:
+Partial TP / BE plan:
+Gestione a TP1:
+Stop a BE dopo TP1:
+Runner verso TP2:
+Decisione piano condizionale:
 Modalità:
 Bias HTF:
 Stato mercato HTF:

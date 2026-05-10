@@ -20,6 +20,28 @@ Il paper trading deve precedere qualsiasi forma di:
 
 ## Fasi del paper trading
 
+## Conditional plan e paper trading
+
+Un Conditional Trade Plan non è un paper trade.
+
+Il piano condizionale serve solo a preparare monitoraggio, alert e rivalutazione.
+
+Un trade può essere simulato in PT-1 solo se, dopo nuova analisi o aggiornamento screenshot, il sistema produce:
+
+- TRADE VALIDO;
+- score >= 75;
+- nessun hard veto;
+- Decisione rischio = RISCHIO OK;
+- Entry, Stop Loss, TP1 e TP2 definiti;
+- R:R su TP2 >= 1:2 oppure R:R gestito esplicitamente validato secondo le regole del sistema;
+- journal completo.
+
+Se il piano condizionale è attivo ma non ancora validato, la decisione resta:
+
+- DA MONITORARE;
+- PIANO CONDIZIONALE ATTIVO;
+- nessun paper trade.
+
 ### Fase PT-0 — Osservazione senza esecuzione
 
 Obiettivo:

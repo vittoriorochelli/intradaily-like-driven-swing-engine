@@ -28,6 +28,24 @@ La size si adatta allo Stop Loss.
 
 Lo Stop Loss non deve essere scelto per comodità monetaria.
 
+## R:R statico e R:R gestito
+
+Il sistema deve distinguere:
+
+- R:R statico: valutazione diretta tra Entry, Stop Loss e TP2;
+- R:R gestito: valutazione che considera TP1, chiusura parziale, Stop Loss a BE e runner verso TP2.
+
+Il R:R gestito può migliorare la qualità del piano, ma non può aggirare i requisiti minimi del trade.
+
+Regole:
+
+- TP1 + BE non sostituisce TP2 valido;
+- TP1 + BE non rende valido un trade con entry scadente;
+- se TP2 è di estensione, deve essere derivato da regola oggettiva;
+- se price discovery non è verificabile, il trade non può essere RISCHIO OK;
+- un piano condizionale può avere rischio preliminare, ma non RISCHIO OK definitivo;
+- Risk e Position Sizing valida solo trade con Entry, Stop Loss tecnico, distanza Entry-SL, TP2, R:R e dati di size sufficienti.
+
 ## Cosa valutare
 
 - rischio monetario fisso;
@@ -38,6 +56,14 @@ Lo Stop Loss non deve essere scelto per comodità monetaria.
 - TP1;
 - TP2;
 - R:R su TP2;
+- R:R statico;
+- R:R gestito;
+- TP1 parziale;
+- Stop a BE dopo TP1;
+- runner verso TP2;
+- TP2 di estensione;
+- price discovery verificata o non verificata;
+- rischio preliminare del piano condizionale;
 - size da calcolare;
 - pip value / tick value / valore punto, se disponibile;
 - lotto minimo;
@@ -97,6 +123,14 @@ Stop troppo largo: sì / no
 TP1:
 TP2:
 R:R su TP2:
+R:R statico:
+R:R gestito:
+TP1 parziale:
+Stop a BE dopo TP1:
+Runner verso TP2:
+TP2 di estensione:
+Price discovery verificata:
+Rischio preliminare piano condizionale:
 Rischio monetario applicabile: sì / no
 Size da calcolare:
 Size calcolabile: sì / no

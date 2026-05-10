@@ -128,6 +128,66 @@ Scenario scartati:
 Dati mancanti:
 Impatto su LTF/Trigger:
 
+## Output conditional trade plan
+
+[CONDITIONAL TRADE PLAN]
+
+Scenario vivo:
+Motivo scenario vivo:
+Trade ora:
+Motivo trade ora:
+Direzione condizionale:
+Livello di attivazione:
+Evento richiesto:
+Trigger richiesto:
+Entry condizionale preliminare:
+Stop tecnico preliminare:
+Motivo stop preliminare:
+TP1 preliminare:
+Motivo TP1:
+TP2 preliminare:
+Motivo TP2:
+R:R preliminare:
+R:R preliminare valido:
+Invalidazione scenario:
+Scadenza temporale del piano:
+Alert da impostare:
+Screenshot successivo richiesto:
+Dati mancanti:
+Decisione piano condizionale:
+
+[PRICE DISCOVERY / OPEN SPACE CHECK]
+
+Prezzo vicino a massimi/minimi visibili:
+Massimi/minimi superiori o inferiori visibili:
+Storico sufficiente:
+Price discovery confermata:
+Price discovery non verificabile:
+Open space condizionale:
+Screenshot aggiuntivo richiesto:
+TP1 strutturale:
+TP2 strutturale:
+TP2 di estensione ammesso:
+Regola TP2 di estensione:
+Qualità TP2:
+Impatto su R:R:
+
+[PARTIAL TP / BREAK-EVEN PLAN]
+
+TP1 tecnico:
+TP1 raggiungibile:
+R:R su TP1:
+Gestione a TP1:
+Percentuale parziale:
+Stop a BE dopo TP1:
+Condizione per spostare SL a BE:
+Runner verso TP2:
+TP2 strutturale:
+TP2 di estensione:
+Rischio residuo dopo BE:
+Trade valido senza TP2 statico:
+Motivo:
+
 ## Output finale single asset
 
 [ASSET: ... | DECISIONE FINALE]
@@ -148,6 +208,21 @@ Stato operativo scenario:
 Rilevanza operativa scenario:
 Scenario alternativi:
 Dati scenario mancanti:
+Conditional trade plan:
+Scenario vivo:
+Trade ora:
+Livello di attivazione:
+Evento richiesto:
+Trigger richiesto:
+Invalidazione scenario:
+Alert da impostare:
+Price discovery check:
+TP2 di estensione ammesso:
+Partial TP / BE plan:
+Gestione a TP1:
+Stop a BE dopo TP1:
+Runner verso TP2:
+Decisione piano condizionale:
 Indicatori utilizzabili per narrativa:
 Indicatori non verificabili:
 Affidabilità indicatori:
@@ -187,6 +262,21 @@ Azione:
 Sintesi operativa:
 Rischio monetario fisso:
 Distanza Entry-SL:
+Conditional trade plan:
+Scenario vivo:
+Trade ora:
+Livello di attivazione:
+Evento richiesto:
+Trigger richiesto:
+Invalidazione scenario:
+Alert da impostare:
+Price discovery check:
+TP2 di estensione ammesso:
+Partial TP / BE plan:
+Gestione a TP1:
+Stop a BE dopo TP1:
+Runner verso TP2:
+Decisione piano condizionale:
 Size da calcolare:
 Size calcolabile:
 Decisione rischio:

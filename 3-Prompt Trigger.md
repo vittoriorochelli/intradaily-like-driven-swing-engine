@@ -45,6 +45,35 @@ Regole:
 - Se Stato temporale scenario = FUTURO_CONDIZIONALE, il Trigger non può produrre TRADE VALIDO ora.
 - Se scenario evidence pack = INSUFFICIENTE, il Trigger non può produrre TRADE VALIDO.
 
+## Relazione con Conditional Trade Plan
+
+Il Trigger deve distinguere:
+
+- trade attivabile ora;
+- trade non valido ora ma scenario vivo;
+- setup invalidato;
+- no edge.
+
+Se il Trigger blocca il trade per assenza di entry, retest, Stop Loss, TP2 o R:R, ma lo scenario resta vivo, deve inviare il caso a `13-Conditional Trade Plan.md`.
+
+Regole:
+
+- TRADE NON VALIDO ora non significa automaticamente setup morto.
+- Se scenario = WAIT_FOR_TRIGGER o WAIT_FOR_RETEST, il Trigger deve indicare quali condizioni mancano.
+- Se lo scenario è vivo ma tardivo, il Trigger deve impedire entry immediata e richiedere piano condizionale.
+- Se il problema principale è TP2 non visibile, il Trigger deve richiedere Price Discovery / Open Space Check.
+- Se esiste TP1 tecnico ma TP2 è condizionale, il Trigger deve richiedere Partial TP / BE Plan.
+- Nessun piano condizionale può rimuovere un hard veto su trade immediato.
+
+## Output Trigger
+
+Scenario vivo:
+Condizioni mancanti:
+Conditional plan richiesto:
+Motivo conditional plan:
+Price discovery check richiesto:
+Partial TP / BE plan richiesto:
+
 ## Hard veto
 
 Bloccare il trade se:

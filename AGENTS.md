@@ -32,11 +32,12 @@ Per asset singolo senza trade aperto:
 5. Scenario Evidence e Candidate Discovery
 6. LTF
 7. Trigger
-8. Scoring finale
-9. Risk e Position Sizing
-10. Decisione operativa
-11. Journal auto-entry
-12. Paper trading decision, se in modalità paper
+8. Conditional Trade Plan
+9. Scoring finale
+10. Risk e Position Sizing
+11. Decisione operativa
+12. Journal auto-entry
+13. Paper trading decision, se in modalità paper
 
 ## Ordine di esecuzione con trade aperto
 
@@ -138,6 +139,18 @@ Score alto + hard veto attivo = TRADE NON VALIDO.
 - Un setup già partito o esteso deve essere classificato TARDIVO o WAIT_FOR_RETEST, non TRADE_NOW.
 - TRADE_NOW nello scenario non significa TRADE VALIDO finale.
 - Se nessuno scenario è supportato da dati sufficienti, usare NO_EDGE.
+
+## Conditional Trade Plan
+
+- L’agente deve produrre Conditional Trade Plan dopo Trigger.
+- Conditional Trade Plan non valida il trade.
+- Se il trade immediato non è valido ma lo scenario è vivo, l’agente deve preparare un piano condizionale.
+- Il piano deve indicare livello di attivazione, evento richiesto, trigger richiesto, invalidazione, alert e screenshot successivo.
+- Se mancano target superiori/inferiori perché lo screenshot non mostra abbastanza storico, l’agente deve chiedere screenshot W1/MN, D1 più ampio o conferma utente su price discovery.
+- L’agente non deve inventare target in open space.
+- L’agente può proporre TP1 parziale e Stop Loss a BE solo come piano di gestione, non come sostituto di TP2 valido.
+- Un piano condizionale non è un paper trade.
+- Un piano condizionale non può diventare TRADE VALIDO senza nuova validazione di Trigger, Risk e hard veto.
 
 ## Output obbligatorio
 

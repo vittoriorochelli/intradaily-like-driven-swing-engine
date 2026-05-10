@@ -34,10 +34,11 @@ Non è previsto il refresh frequente del trigger durante la giornata.
 5. Scenario Evidence e Candidate Discovery
 6. LTF
 7. Trigger
-8. Scoring finale
-9. Risk e Position Sizing
-10. Decisione finale
-11. Journal auto-entry
+8. Conditional Trade Plan
+9. Scoring finale
+10. Risk e Position Sizing
+11. Decisione finale
+12. Journal auto-entry
 
 ### CASO B — trade aperto
 
@@ -47,10 +48,12 @@ Non è previsto il refresh frequente del trigger durante la giornata.
 4. verifica HTF solo se necessario
 5. Scenario Evidence e Candidate Discovery se serve rivalutare lo scenario
 6. verifica LTF aggiornata
-7. Gestione Posizione
-8. Risk e Position Sizing se stop, size o esposizione cambiano
-9. Decisione finale di gestione
-10. Journal auto-entry trade aperto
+7. Trigger se serve rivalutare attivazione o deterioramento
+8. Conditional Trade Plan se il trade non è aperto oppure se bisogna valutare una nuova condizione
+9. Gestione Posizione
+10. Risk e Position Sizing se stop, size o esposizione cambiano
+11. Decisione finale di gestione
+12. Journal auto-entry trade aperto
 
 ### CASO C — multi-asset
 
@@ -103,6 +106,13 @@ Il sistema swing usa principalmente automazione full.
 - LTF deve leggere solo la reazione del prezzo rispetto alla zona HTF
 - Trigger deve decidere solo: TRADE VALIDO / TRADE NON VALIDO / DA MONITORARE
 - Il Trigger deve produrre Entry, SL, TP1, TP2 e R:R
+- Dopo Trigger, il sistema deve produrre Conditional Trade Plan.
+- Conditional Trade Plan non rende valido un trade.
+- Se il trade immediato è non valido ma lo scenario è vivo, il sistema deve indicare livello di attivazione, trigger richiesto, invalidazione, alert e screenshot successivo.
+- Se il TP2 non è visibile perché il prezzo è vicino a massimi/minimi, il sistema deve eseguire Price Discovery / Open Space Check.
+- Se lo storico è insufficiente, chiedere screenshot W1/MN, screenshot D1 più ampio oppure conferma utente sui massimi/minimi storici.
+- Se TP1 è tecnico, il sistema può proporre gestione parziale e Stop Loss a BE dopo TP1, ma questo non sostituisce TP2 valido.
+- Un piano condizionale non può essere paper trade finché una nuova analisi non produce TRADE VALIDO.
 - Il sistema deve sempre restituire lo score finale
 - Il sistema deve sempre elencare gli hard veto attivi
 - Se esiste un hard veto attivo, la decisione finale deve essere TRADE NON VALIDO
@@ -266,6 +276,21 @@ Stato operativo scenario:
 Rilevanza operativa scenario:
 Scenario alternativi:
 Dati scenario mancanti:
+Conditional trade plan:
+Scenario vivo:
+Trade ora:
+Livello di attivazione:
+Evento richiesto:
+Trigger richiesto:
+Invalidazione scenario:
+Alert da impostare:
+Price discovery check:
+TP2 di estensione ammesso:
+Partial TP / BE plan:
+Gestione a TP1:
+Stop a BE dopo TP1:
+Runner verso TP2:
+Decisione piano condizionale:
 Indicatori utilizzabili per narrativa:
 Indicatori non verificabili:
 Affidabilità indicatori:
