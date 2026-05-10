@@ -227,7 +227,7 @@ Un test fallisce se il sistema:
 - sceglie come principale uno scenario storicamente forte ma non più attivabile;
 - non dichiara dati scenario mancanti;
 - interpreta TRADE_NOW come TRADE VALIDO finale;
-- promuove scenario TARDIVO senza nuovo trigger/retest.
+- promuove scenario TARDIVO senza nuovo trigger/retest;
 - dichiara TRADE NON VALIDO senza distinguere scenario vivo quando lo scenario è ancora valido;
 - non produce piano condizionale quando scenario = WAIT_FOR_TRIGGER o WAIT_FOR_RETEST;
 - inventa TP2 in price discovery;
@@ -279,7 +279,7 @@ Classificare ogni problema come:
 - TP2 di estensione inventato;
 - TP1/BE usato impropriamente;
 - scenario vivo trattato come setup morto;
-- paper trade generato da piano condizionale.
+- paper trade generato da piano condizionale;
 - errore Output Schema;
 - errore Agentico;
 - ambiguità di prompt;

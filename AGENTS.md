@@ -49,10 +49,12 @@ Se esiste un trade aperto:
 4. verifica HTF solo se necessario
 5. Scenario Evidence e Candidate Discovery se serve rivalutare lo scenario
 6. verifica LTF aggiornata
-7. Gestione posizione
-8. Risk e Position Sizing se stop, size o esposizione cambiano
-9. Decisione finale di gestione
-10. Journal auto-entry trade aperto
+7. Trigger se serve rivalutare attivazione o deterioramento
+8. Conditional Trade Plan se il trade non è aperto oppure se bisogna valutare una nuova condizione
+9. Gestione posizione
+10. Risk e Position Sizing se stop, size o esposizione cambiano
+11. Decisione finale di gestione
+12. Journal auto-entry trade aperto
 
 L’agente non deve cercare un nuovo setup sullo stesso asset se esiste già un trade aperto, salvo richiesta esplicita.
 

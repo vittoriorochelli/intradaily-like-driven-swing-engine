@@ -57,14 +57,7 @@ Non è previsto il refresh frequente del trigger durante la giornata.
 
 ### CASO C — multi-asset
 
-1. Ogni asset deve eseguire:
-   - Preflight
-   - Indicator Setup Sanity Check
-   - Narrativa da Screenshot
-   - Scenario Evidence e Candidate Discovery
-   - sequenza CASO A o CASO B
-   - decisione operativa
-   - journal auto-entry
+1. Ogni asset deve seguire la sequenza CASO A o CASO B completa, con decisione operativa e journal auto-entry.
 2. Produrre decisione operativa per ogni asset
 3. Escludere asset con hard veto o rischio non ok
 4. Confrontare gli asset rimanenti
@@ -386,6 +379,39 @@ Timeframe input:
 Screenshot HTF presente:
 Screenshot LTF presente:
 Materiale sufficiente:
+Indicator setup check:
+Indicatori utilizzabili per narrativa:
+Indicatori non verificabili:
+Affidabilità indicatori:
+Narrativa ricostruita:
+Setup già partito:
+Entry ancora disponibile:
+Entry già passata:
+Stato operativo da narrativa:
+Scenario evidence pack:
+Evidence pack affidabile:
+Scenario principale:
+Direzione scenario:
+Stato temporale scenario:
+Stato operativo scenario:
+Rilevanza operativa scenario:
+Scenario alternativi:
+Dati scenario mancanti:
+Conditional trade plan:
+Scenario vivo:
+Trade ora:
+Livello di attivazione:
+Evento richiesto:
+Trigger richiesto:
+Invalidazione scenario:
+Alert da impostare:
+Price discovery check:
+TP2 di estensione ammesso:
+Partial TP / BE plan:
+Gestione a TP1:
+Stop a BE dopo TP1:
+Runner verso TP2:
+Decisione piano condizionale:
 Modalità:
 Bias HTF:
 Stato mercato HTF:
