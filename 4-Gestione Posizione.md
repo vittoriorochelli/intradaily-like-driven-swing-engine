@@ -4,7 +4,19 @@
 
 Gestire un trade swing/multiday già aperto.
 
-Questo blocco si usa solo se esiste una posizione aperta.
+Questo blocco si usa solo se esiste un trade aperto.
+
+## Input richiesti per gestione
+
+- asset
+- direzione trade: long / short
+- entry
+- stop attuale
+- target o target parziali
+- motivo originario del trade
+- output precedente di HTF, LTF e Trigger se disponibile
+- screenshot aggiornato H4/H1
+- screenshot D1/H4 se la struttura superiore è cambiata o non è chiara
 
 ## Cosa valutare
 
@@ -14,52 +26,75 @@ Questo blocco si usa solo se esiste una posizione aperta.
 - Il prezzo conferma o nega il movimento atteso?
 - La posizione va mantenuta, protetta, ridotta o chiusa?
 
-## Stati possibili
+## Stati del trade
 
-- Vivo
-- In conferma
-- In deterioramento
-- Invalidato
+Valori ammessi:
 
-## Azioni possibili
+- VIVO
+- IN CONFERMA
+- IN DETERIORAMENTO
+- INVALIDATO
 
-- Mantieni
-- Porta a break-even
-- Alleggerisci
-- Stringi stop
-- Chiudi parziale
-- Chiudi totale
-- Nessuna azione
+Definizioni:
 
-## Principio
+- VIVO: la tesi resta valida, ma il trade non ha ancora confermato pienamente.
+- IN CONFERMA: il prezzo si muove coerentemente con la tesi.
+- IN DETERIORAMENTO: la tesi perde qualità anche senza stop colpito.
+- INVALIDATO: la ragione tecnica del trade non esiste più.
 
-Se il trade perde qualità, va segnalato anche se stop loss o take profit non sono stati toccati.
+## Deterioramento del trade
 
-## Derivazione dalla gestione intraday
+Il trade è in deterioramento se compare uno o più di questi segnali:
 
-La gestione swing non deve essere iper-reattiva.
+- perdita della zona HTF che sosteneva il setup
+- fallimento della reazione LTF
+- acceptance contraria alla direzione del trade
+- rottura strutturale opposta
+- perdita di dominance coerente
+- Volume Profile sfavorevole se usato nella tesi
+- VWAP sfavorevole se usata nella tesi
+- mancata evoluzione dopo tempo ragionevole
+- prezzo torna nel mezzo del range senza continuazione
 
-Deve lavorare soprattutto su H4/D1 e valutare:
+## Azioni ammesse
 
-- trade vivo
-- in conferma
-- in deterioramento
-- invalidato
-- protezione profitto
-- uscita anticipata se il trade perde qualità
+- MANTIENI
+- PORTA A BREAK-EVEN
+- STRINGI STOP
+- ALLEGGERISCI
+- CHIUDI PARZIALE
+- CHIUDI TOTALE
+- NESSUNA AZIONE
 
-## Output base
+## Regola anti-rumore
+
+La gestione swing/multiday deve lavorare soprattutto su H4/D1.
+Non deve essere iper-reattiva.
+Non deve chiudere un trade valido solo per rumore locale.
+Non deve fare micro-management.
+
+Se il trade perde qualità, il sistema deve segnalarlo anche se stop loss o take profit non sono stati toccati.
+Se il trade resta tecnicamente valido, il sistema deve evitare uscite premature.
+
+## Output obbligatorio
 
 [ASSET: ... | GESTIONE POSIZIONE]
 
-Coerenza attuale:
+Direzione trade:
+Entry:
+Stop attuale:
+Target:
+Tesi originaria:
+Coerenza con HTF:
+Coerenza con LTF:
+Coerenza con Trigger:
 Stato trade:
 Deterioramento:
+Motivo deterioramento:
 Azione consigliata:
-Urgenza:
-Stop attuale:
 Nuovo stop:
 Gestione profitto:
 Uscita anticipata:
 Condizione di uscita anticipata:
+Urgenza:
 Sintesi operativa:

@@ -18,23 +18,30 @@ Non è previsto il refresh frequente del trigger durante la giornata.
 
 ## Sequenza obbligatoria
 
-1. Preflight Input Check
-2. Struttura HTF
-3. Timing LTF
+### CASO A — nessun trade aperto
+
+1. Preflight
+2. HTF
+3. LTF
 4. Trigger
-5. Gestione posizione, solo se esiste trade aperto
-6. Decisione finale
+5. Decisione finale
+
+### CASO B — trade aperto
+
+1. Preflight
+2. verifica HTF solo se necessario
+3. verifica LTF aggiornata
+4. Gestione Posizione
+5. Decisione finale di gestione
+
+## Regola di priorità con trade aperto
+
+Se esiste un trade aperto, il sistema non deve cercare un nuovo setup sullo stesso asset, salvo richiesta esplicita.
+Deve concentrarsi sulla qualità residua del trade aperto.
 
 ## Logica intraday-like
 
-L’automazione full applica in sequenza la stessa logica mentale dell’intraday, ma su timeframe swing:
-
-Preflight
-→ HTF D1/H4
-→ LTF H4/H1
-→ Trigger
-→ Gestione se trade aperto
-→ Decisione finale
+L’automazione full applica in sequenza la stessa logica mentale dell’intraday, ma su timeframe swing.
 
 Non esistono refresh frequenti del trigger.
 Il sistema swing usa principalmente automazione full.
@@ -87,3 +94,26 @@ Valori ammessi per Azione:
 - DA MONITORARE
 - GESTIRE TRADE APERTO
 - ASSET NON LEGGIBILE
+
+## Output finale con trade aperto
+
+[ASSET: ... | DECISIONE FINALE - TRADE APERTO]
+
+Stato trade:
+Deterioramento:
+Azione:
+Nuovo stop:
+Gestione profitto:
+Uscita anticipata:
+Motivo:
+Sintesi operativa:
+
+Valori ammessi per Azione con trade aperto:
+
+- MANTIENI
+- PORTA A BREAK-EVEN
+- STRINGI STOP
+- ALLEGGERISCI
+- CHIUDI PARZIALE
+- CHIUDI TOTALE
+- NESSUNA AZIONE
