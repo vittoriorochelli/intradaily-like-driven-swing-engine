@@ -11,23 +11,62 @@ Serve solo a controllare qualità, coerenza e completezza degli input.
 
 ## Input attesi
 
-- Nome asset
-- Screenshot W1, se disponibile
-- Screenshot D1
-- Screenshot H4
-- Screenshot H1
-- Eventuali screenshot con Volume Profile
-- Eventuali screenshot con VWAP
-- Eventuali screenshot con AVWAP
-- Eventuali strumenti visibili per dominance buyers/sellers
+- Screenshot HTF D1/H4
+- Screenshot LTF H4/H1
 - Eventuale indicazione di trade già aperto
+
+## Validità dello screenshot
+
+La presenza dello screenshot non è sufficiente.
+
+Uno screenshot è valido solo se contiene il timeframe richiesto, prezzo e scala leggibili, numero di barre sufficiente, struttura leggibile e gli indicatori necessari al blocco che deve alimentare.
+
+L’utente non è tenuto a fornire zone, livelli, supply/demand o invalidazioni già tracciate: questi elementi devono essere ricavati dal sistema attraverso l’analisi.
+
+Se il timeframe è corretto ma mancano indicatori indispensabili, oppure lo zoom non consente di leggere struttura/reazione, il materiale va classificato come parziale o insufficiente.
+
+Il sistema non deve procedere alla decisione finale se mancano dati o indicatori indispensabili per validare struttura, timing o trigger.
+
+## Controllo zoom e leggibilità
+
+Classifica ogni screenshot come:
+
+- leggibile
+- troppo zoomato
+- troppo wide
+- non leggibile
+
+Se troppo zoomato o troppo wide, chiedere integrazione mirata.
+
+## Indicatori
+
+Indicatori/elementi che possono essere necessari, a seconda del blocco:
+
+HTF D1/H4:
+
+- Volume Profile, se necessario alla lettura di valore;
+- POC, VAH, VAL, HVN, LVN se il Volume Profile è usato;
+- AVWAP se rilevante per la lettura strutturale;
+- volume bars se necessari alla lettura.
+
+LTF H4/H1:
+
+- VWAP se usata per timing/trigger;
+- Volume Profile locale se usato come conferma;
+- dominance buyers/sellers se usata come conferma;
+- delta/volume se presenti e rilevanti;
+- volume bars se necessari alla lettura.
+
+Se un indicatore necessario alla decisione non è visibile, il sistema deve chiedere integrazione.
 
 ## Controlli da eseguire
 
 - Asset dichiarato chiaramente
 - Timeframe leggibili
-- Screenshot coerenti con la fase dichiarata
+- Prezzo e scala leggibili
 - Numero di barre sufficiente
+- Struttura leggibile
+- Zoom adeguato
 - Indicatori visibili dove richiesti
 - Nessun mismatch evidente tra descrizione e immagine
 - Presenza o assenza di dati critici
@@ -37,11 +76,16 @@ Serve solo a controllare qualità, coerenza e completezza degli input.
 [PRE-FLIGHT CHECK]
 
 Asset:
-Screenshot disponibili:
+Screenshot HTF D1/H4:
+Screenshot LTF H4/H1:
 Timeframe leggibili:
-Indicatori visibili:
-Materiale sufficiente:
-Problemi rilevati:
-Screenshot da rimappare:
-Dati mancanti:
-Procedere con analisi: sì / no
+Prezzo/scala leggibili:
+Numero barre sufficiente:
+Zoom:
+Indicatori HTF visibili:
+Indicatori LTF visibili:
+Indicatori indispensabili mancanti:
+Indicatori opzionali mancanti:
+Materiale sufficiente: sì / no / parziale
+Integrazione richiesta:
+Procedere con analisi: sì / no / solo parziale

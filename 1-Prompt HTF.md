@@ -6,6 +6,13 @@ HTF significa Higher Time Frame, cioè timeframe superiore.
 
 Analizzare la struttura swing dell’asset sui timeframe superiori e identificare le zone operative principali.
 
+Il blocco HTF lavora principalmente sullo screenshot D1/H4.
+
+L’utente non deve fornire zone già tracciate.
+Il sistema deve ricavare zone supply/demand, livelli chiave, invalidazione e aree di monitoraggio.
+
+Se lo screenshot D1/H4 non permette di leggere struttura o indicatori necessari, il sistema deve chiedere integrazione.
+
 ## Timeframe
 
 - W1: cornice opzionale
@@ -18,6 +25,7 @@ Analizzare la struttura swing dell’asset sui timeframe superiori e identificar
 - Bias strutturale long, short o neutro
 - Swing principali
 - Zone supply/demand
+- Livelli chiave
 - Qualità delle zone
 - Fresh/tested
 - Reazione precedente alla zona
@@ -49,12 +57,14 @@ Wyckoff:
 AMT:
 Zone demand:
 Zone supply:
+Livelli chiave:
 Volume Profile:
 AVWAP:
 Dominance buyers/sellers:
 Zona primaria:
 Zona secondaria:
 Invalidazione strutturale:
+Aree di monitoraggio:
 Asset valido fuori zona:
 Cosa osservare in LTF:
 Qualità struttura:

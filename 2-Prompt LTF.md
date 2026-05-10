@@ -6,8 +6,16 @@ LTF significa Lower Time Frame, cioè timeframe inferiore.
 
 Leggere la reazione del prezzo dentro o a contatto con la zona HTF selezionata.
 
+Il blocco LTF lavora principalmente sullo screenshot H4/H1.
+
 Il blocco LTF non cerca nuove zone principali.  
 Deve verificare se il prezzo sta confermando, negando o lasciando aperto il setup HTF.
+
+Il sistema deve ricavare la reazione locale dalla lettura del prezzo.
+Non deve pretendere zone già tracciate dall’utente.
+
+Se mancano VWAP, Volume Profile locale o dominance buyers/sellers quando sono necessari alla validazione, deve chiedere integrazione.
+Se lo zoom non consente di leggere la reazione, deve chiedere screenshot più adatto.
 
 ## Timeframe
 
