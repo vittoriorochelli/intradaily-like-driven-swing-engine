@@ -62,18 +62,14 @@ L’agente non deve cercare un nuovo setup sullo stesso asset se esiste già un 
 
 Per modalità multi-asset:
 
-1. Per ogni asset eseguire Preflight.
-2. Per ogni asset eseguire Indicator Setup Sanity Check.
-3. Per ogni asset eseguire Narrativa da Screenshot.
-4. Per ogni asset eseguire HTF e Scenario Evidence e Candidate Discovery.
-5. Per ogni asset eseguire la sequenza CASO A o CASO B.
-6. Produrre decisione operativa per ogni asset.
-7. Produrre journal auto-entry per ogni asset.
-8. Escludere asset con hard veto.
-9. Escludere asset con rischio non ok.
-10. Valutare correlazione.
-11. Produrre ranking.
-12. Se nessun asset è valido, dichiarare NESSUN TRADE.
+1. Per ogni asset eseguire la sequenza CASO A o CASO B completa secondo `automazione_full.md`.
+2. Produrre decisione operativa per ogni asset.
+3. Produrre journal auto-entry per ogni asset.
+4. Escludere asset con hard veto.
+5. Escludere asset con rischio non ok.
+6. Valutare correlazione.
+7. Produrre ranking.
+8. Se nessun asset è valido, dichiarare NESSUN TRADE.
 
 ## Gestione dati mancanti
 
