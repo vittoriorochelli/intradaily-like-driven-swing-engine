@@ -52,41 +52,50 @@ Regole:
 14. Entry ancora disponibile
 15. Entry già passata
 16. Stato operativo da narrativa
-17. Modalità
-18. Bias HTF
-19. Stato mercato HTF
-20. Zona primaria
-21. Zona secondaria
-22. Invalidazione strutturale
-23. Reazione LTF
-24. Classificazione reazione
-25. Tipo entry
-26. Entry
-27. Stop Loss
-28. Motivo Stop Loss
-29. TP1
-30. TP2
-31. R:R su TP1
-32. R:R su TP2
-33. Score HTF
-34. Score LTF
-35. Score Trigger
-36. Score R:R / qualità operativa
-37. Score finale
-38. Hard veto attivi
-39. Decisione rischio
-40. Rischio monetario fisso
-41. Distanza Entry-SL
-42. Size calcolabile
-43. Dati mancanti per size
-44. Decisione finale
-45. Azione
-46. Motivo principale
-47. Validità temporale setup
-48. Cosa monitorare
-49. Trade preso
-50. Esito
-51. Note review
+17. Scenario evidence pack
+18. Affidabilità evidence pack
+19. Scenario principale
+20. Direzione scenario
+21. Stato temporale scenario
+22. Stato operativo scenario
+23. Rilevanza operativa scenario
+24. Scenario alternativi
+25. Dati scenario mancanti
+26. Modalità
+27. Bias HTF
+28. Stato mercato HTF
+29. Zona primaria
+30. Zona secondaria
+31. Invalidazione strutturale
+32. Reazione LTF
+33. Classificazione reazione
+34. Tipo entry
+35. Entry
+36. Stop Loss
+37. Motivo Stop Loss
+38. TP1
+39. TP2
+40. R:R su TP1
+41. R:R su TP2
+42. Score HTF
+43. Score LTF
+44. Score Trigger
+45. Score R:R / qualità operativa
+46. Score finale
+47. Hard veto attivi
+48. Decisione rischio
+49. Rischio monetario fisso
+50. Distanza Entry-SL
+51. Size calcolabile
+52. Dati mancanti per size
+53. Decisione finale
+54. Azione
+55. Motivo principale
+56. Validità temporale setup
+57. Cosa monitorare
+58. Trade preso
+59. Esito
+60. Note review
 
 ## Colonne consigliate — Trade aperto
 
@@ -135,6 +144,15 @@ Ogni analisi deve registrare:
 - entry ancora disponibile;
 - entry già passata;
 - stato operativo da narrativa;
+- scenario evidence pack;
+- affidabilità evidence pack;
+- scenario principale;
+- direzione scenario;
+- stato temporale scenario;
+- stato operativo scenario;
+- rilevanza operativa scenario;
+- scenario alternativi;
+- dati scenario mancanti;
 - bias HTF;
 - stato mercato HTF;
 - zona primaria;
@@ -186,6 +204,8 @@ Questi casi sono fondamentali per capire:
 - se alcuni asset sono spesso non leggibili;
 - se alcuni setup vengono scartati per motivi ripetitivi.
 
+Il journal deve permettere di verificare se il sistema ha classificato correttamente continuation, reversal candidate, balance rotation o no edge.
+
 ## Tipi di errore
 
 Quando un trade viene rivisto, classificare eventuali errori come:
@@ -235,6 +255,15 @@ Setup già partito:
 Entry ancora disponibile:
 Entry già passata:
 Stato operativo da narrativa:
+Scenario evidence pack:
+Evidence pack affidabile:
+Scenario principale:
+Direzione scenario:
+Stato temporale scenario:
+Stato operativo scenario:
+Rilevanza operativa scenario:
+Scenario alternativi:
+Dati scenario mancanti:
 Modalità:
 Bias HTF:
 Stato mercato HTF:

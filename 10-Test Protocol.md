@@ -172,6 +172,12 @@ Un test è superato solo se:
 - esegue Preflight;
 - esegue Indicator Setup Sanity Check;
 - esegue Narrativa da Screenshot;
+- esegue Scenario Evidence e Candidate Discovery;
+- produce Scenario Evidence Pack;
+- non classifica scenari senza evidenze;
+- distingue tra continuation, reversal candidate, balance rotation e no edge;
+- classifica correttamente scenario tardivo, futuro condizionale, attivo o scartato;
+- distingue TRADE_NOW nello scenario da TRADE VALIDO finale;
 - non salta Risk e Position Sizing;
 - applica hard veto;
 - restituisce score finale;
@@ -201,6 +207,13 @@ Un test fallisce se il sistema:
 - ricomincia la narrativa da zero ignorando la sequenza visibile nello screenshot;
 - scrive “attendere breakout” quando il breakout è già visibile;
 - non distingue tra breakout avvenuto, accettazione, retest, entry tardiva o setup invalidato.
+- classifica CONTINUATION solo perché il trend è forte;
+- classifica REVERSAL_CANDIDATE solo perché il prezzo è alto o basso;
+- classifica BALANCE_ROTATION senza balance/value area leggibile;
+- sceglie come principale uno scenario storicamente forte ma non più attivabile;
+- non dichiara dati scenario mancanti;
+- interpreta TRADE_NOW come TRADE VALIDO finale;
+- promuove scenario TARDIVO senza nuovo trigger/retest.
 
 ## Registro problemi di test
 
@@ -249,7 +262,14 @@ Classificare ogni problema come:
 - errore Narrativa;
 - uso improprio VWAP/AVWAP/VP;
 - narrativa non ricostruita;
-- narrativa incoerente con screenshot.
+- narrativa incoerente con screenshot;
+- errore Scenario Evidence;
+- scenario non supportato da dati;
+- scenario tardivo promosso a trade;
+- candidate principale scelto male;
+- evidence pack insufficiente;
+- TRADE_NOW frainteso;
+- hard veto scenario ignorato.
 
 ## Patch dopo test
 
