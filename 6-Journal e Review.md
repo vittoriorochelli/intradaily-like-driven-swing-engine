@@ -70,47 +70,52 @@ Regole:
 32. Invalidazione scenario
 33. Alert da impostare
 34. Price discovery check
-35. TP2 di estensione ammesso
-36. Partial TP / BE plan
-37. Gestione a TP1
-38. Stop a BE dopo TP1
-39. Runner verso TP2
-40. Decisione piano condizionale
-41. Modalità
-42. Bias HTF
-43. Stato mercato HTF
-44. Zona primaria
-45. Zona secondaria
-46. Invalidazione strutturale
-47. Reazione LTF
-48. Classificazione reazione
-49. Tipo entry
-50. Entry
-51. Stop Loss
-52. Motivo Stop Loss
-53. TP1
-54. TP2
-55. R:R su TP1
-56. R:R su TP2
-57. Score HTF
-58. Score LTF
-59. Score Trigger
-60. Score R:R / qualità operativa
-61. Score finale
-62. Hard veto attivi
-63. Decisione rischio
-64. Rischio monetario fisso
-65. Distanza Entry-SL
-66. Size calcolabile
-67. Dati mancanti per size
-68. Decisione finale
-69. Azione
-70. Motivo principale
-71. Validità temporale setup
-72. Cosa monitorare
-73. Trade preso
-74. Esito
-75. Note review
+35. Esito price discovery/open space
+36. Storico sufficiente
+37. Screenshot aggiuntivo richiesto
+38. Regola TP2 di estensione
+39. Qualità TP2 di estensione
+40. TP2 di estensione ammesso
+41. Partial TP / BE plan
+42. Gestione a TP1
+43. Stop a BE dopo TP1
+44. Runner verso TP2
+45. Decisione piano condizionale
+46. Modalità
+47. Bias HTF
+48. Stato mercato HTF
+49. Zona primaria
+50. Zona secondaria
+51. Invalidazione strutturale
+52. Reazione LTF
+53. Classificazione reazione
+54. Tipo entry
+55. Entry
+56. Stop Loss
+57. Motivo Stop Loss
+58. TP1
+59. TP2
+60. R:R su TP1
+61. R:R su TP2
+62. Score HTF
+63. Score LTF
+64. Score Trigger
+65. Score R:R / qualità operativa
+66. Score finale
+67. Hard veto attivi
+68. Decisione rischio
+69. Rischio monetario fisso
+70. Distanza Entry-SL
+71. Size calcolabile
+72. Dati mancanti per size
+73. Decisione finale
+74. Azione
+75. Motivo principale
+76. Validità temporale setup
+77. Cosa monitorare
+78. Trade preso
+79. Esito
+80. Note review
 
 ## Colonne consigliate — Trade aperto
 
@@ -177,6 +182,11 @@ Ogni analisi deve registrare:
 - invalidazione scenario;
 - alert da impostare;
 - price discovery check;
+- esito price discovery/open space;
+- storico sufficiente;
+- screenshot aggiuntivo richiesto;
+- regola TP2 di estensione;
+- qualità TP2 di estensione;
 - TP2 di estensione ammesso;
 - partial TP / BE plan;
 - gestione a TP1;
@@ -303,6 +313,11 @@ Trigger richiesto:
 Invalidazione scenario:
 Alert da impostare:
 Price discovery check:
+Esito price discovery/open space:
+Storico sufficiente:
+Screenshot aggiuntivo richiesto:
+Regola TP2 di estensione:
+Qualità TP2 di estensione:
 TP2 di estensione ammesso:
 Partial TP / BE plan:
 Gestione a TP1:

@@ -122,6 +122,78 @@ Valori ammessi per Decisione piano condizionale:
 - PIANO CONDIZIONALE DA RIVALUTARE
 - SETUP INVALIDATO
 
+
+## Regola di produzione obbligatoria dei blocchi
+
+Il sistema deve produrre sempre il blocco:
+
+[CONDITIONAL TRADE PLAN]
+
+dopo il Trigger.
+
+Il sistema deve produrre anche:
+
+[PRICE DISCOVERY / OPEN SPACE CHECK]
+
+quando almeno una delle seguenti condizioni è vera:
+
+- TP2 è mancante;
+- TP2 è non verificabile;
+- TP1 coincide con massimo/minimo precedente;
+- il prezzo è vicino a massimi/minimi visibili;
+- il prezzo rompe o minaccia di rompere massimi/minimi visibili;
+- il sistema cita price discovery, open space, estensione, storico insufficiente o target superiore/inferiore non visibile;
+- il sistema richiede screenshot W1/MN o D1 più ampio.
+
+Il sistema deve produrre anche:
+
+[PARTIAL TP / BREAK-EVEN PLAN]
+
+quando almeno una delle seguenti condizioni è vera:
+
+- esiste un TP1 tecnico;
+- TP1 è vicino ma raggiungibile;
+- TP2 è mancante o condizionale;
+- il trade viene bloccato per R:R insufficiente;
+- si cita gestione parziale;
+- si cita break-even o BE;
+- si valuta un runner verso TP2;
+- il trade immediato è non valido ma lo scenario resta vivo.
+
+Questi blocchi devono essere prodotti anche quando il risultato è:
+
+- non applicabile;
+- da rivalutare;
+- condizionale;
+- non verificabile.
+
+Il sistema non deve saltare i blocchi solo perché il trade immediato è non valido.
+
+## Regola TP2 di estensione
+
+Il campo `TP2 di estensione ammesso` deve usare questi valori:
+
+- sì: solo se price discovery/open space è verificata e il target deriva da una regola oggettiva;
+- no: solo se il TP2 di estensione è realmente escluso da struttura contraria, supply/demand evidente, assenza di breakout o assenza di spazio operativo;
+- condizionale: se il TP2 di estensione potrebbe essere valutato, ma servono screenshot più ampi, conferma di price discovery, nuovo breakout/retest o dati aggiuntivi;
+- non applicabile: se il caso non riguarda open space, price discovery o estensione.
+
+Regola:
+non usare `no` solo perché il TP2 non è ancora verificato.
+Se il problema è storico insufficiente, usare `condizionale` o `non verificabile`, non `no`.
+
+## Regola Partial TP / BE
+
+Il blocco Partial TP / BE deve distinguere:
+
+- non applicabile ora;
+- da rivalutare dopo trigger;
+- condizionale;
+- valido come gestione.
+
+TP1 + BE non rende valido il trade.
+TP1 + BE può solo qualificare un piano condizionale o una gestione futura.
+
 ## Price Discovery / Open Space Check
 
 Quando il TP1 coincide con massimi/minimi precedenti o con una barriera strutturale visibile, il sistema non deve dichiarare automaticamente TP2 mancante.
@@ -169,6 +241,7 @@ Valori ammessi per TP2 di estensione ammesso:
 - sì
 - no
 - condizionale
+- non applicabile
 
 Valori ammessi per Qualità TP2:
 

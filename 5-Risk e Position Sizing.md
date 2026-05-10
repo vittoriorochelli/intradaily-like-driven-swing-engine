@@ -40,6 +40,21 @@ Il R:R gestito può migliorare la qualità del piano, ma non può aggirare i req
 Regole:
 
 - TP1 + BE non sostituisce TP2 valido;
+
+Se TP2 è mancante/non verificabile e il sistema valuta un piano condizionale, Risk deve dichiarare:
+
+- R:R statico: non validabile;
+- R:R gestito: da rivalutare;
+- TP2 di estensione: condizionale se dipende da price discovery o storico aggiuntivo;
+- rischio preliminare piano condizionale: da rivalutare.
+
+Non usare `TP2 di estensione: non applicabile` se il sistema ha appena citato price discovery, open space, storico superiore o target oltre massimo/minimo visibile.
+
+Usare:
+
+- `condizionale` quando servono dati o conferme;
+- `no` solo quando l’estensione è realmente esclusa;
+- `non applicabile` solo quando la questione price discovery/open space non è rilevante.
 - TP1 + BE non rende valido un trade con entry scadente;
 - se TP2 è di estensione, deve essere derivato da regola oggettiva;
 - se price discovery non è verificabile, il trade non può essere RISCHIO OK;

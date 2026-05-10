@@ -198,6 +198,11 @@ Un test è superato solo se:
 - non usa TP1 + BE per aggirare TP2, R:R o Risk;
 - non dichiara paper trade su piano condizionale non validato;
 - usa `mancante`, `non applicabile` o `da aggiornare` per i dati non disponibili.
+- produce [PRICE DISCOVERY / OPEN SPACE CHECK] quando TP2 è mancante/non verificabile o il prezzo è vicino a massimi/minimi visibili;
+- produce [PARTIAL TP / BREAK-EVEN PLAN] quando esiste TP1 tecnico, TP2 è condizionale/mancante o viene citata gestione a TP1;
+- usa `TP2 di estensione ammesso: condizionale` quando price discovery/open space è possibile ma non verificata;
+- non usa `TP2 di estensione ammesso: no` solo perché manca lo storico;
+- non dichiara TEST SUPERATO se mancano blocchi obbligatori.
 
 ## Criteri di fallimento
 
@@ -236,6 +241,11 @@ Un test fallisce se il sistema:
 - considera Conditional Trade Plan come TRADE VALIDO;
 - considera Conditional Trade Plan come paper trade;
 - non registra il piano condizionale nel journal.
+- cita TP2 mancante/non verificabile ma non produce [PRICE DISCOVERY / OPEN SPACE CHECK];
+- cita TP1 tecnico o BE ma non produce [PARTIAL TP / BREAK-EVEN PLAN];
+- classifica come `no` un TP2 di estensione che dovrebbe essere `condizionale`;
+- dichiara TEST SUPERATO pur avendo saltato blocchi obbligatori;
+- inserisce price discovery solo come nota narrativa senza blocco autonomo.
 
 ## Registro problemi di test
 

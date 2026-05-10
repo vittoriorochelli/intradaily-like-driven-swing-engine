@@ -35,6 +35,9 @@ Non è previsto il refresh frequente del trigger durante la giornata.
 6. LTF
 7. Trigger
 8. Conditional Trade Plan
+   - produrre sempre [CONDITIONAL TRADE PLAN];
+   - produrre [PRICE DISCOVERY / OPEN SPACE CHECK] se TP2 è mancante/non verificabile, se il prezzo è vicino a massimi/minimi visibili o se serve valutare estensione/open space;
+   - produrre [PARTIAL TP / BREAK-EVEN PLAN] se esiste TP1 tecnico, se TP2 è condizionale/mancante, o se il trade è bloccato da R:R ma lo scenario resta vivo.
 9. Scoring finale
 10. Risk e Position Sizing
 11. Decisione finale
@@ -101,6 +104,10 @@ Il sistema swing usa principalmente automazione full.
 - Il Trigger deve produrre Entry, SL, TP1, TP2 e R:R
 - Dopo Trigger, il sistema deve produrre Conditional Trade Plan.
 - Conditional Trade Plan non rende valido un trade.
+- Se il sistema cita TP2 mancante, TP2 non verificabile, price discovery, open space, target superiore/inferiore non visibile o storico insufficiente, deve produrre il blocco [PRICE DISCOVERY / OPEN SPACE CHECK].
+- Se il sistema cita TP1 tecnico, parziale, BE, break-even, runner o R:R gestito, deve produrre il blocco [PARTIAL TP / BREAK-EVEN PLAN].
+- La mancanza di questi blocchi rende il test non superato.
+- Questi blocchi non validano il trade e non rimuovono hard veto.
 - Se il trade immediato è non valido ma lo scenario è vivo, il sistema deve indicare livello di attivazione, trigger richiesto, invalidazione, alert e screenshot successivo.
 - Se il TP2 non è visibile perché il prezzo è vicino a massimi/minimi, il sistema deve eseguire Price Discovery / Open Space Check.
 - Se lo storico è insufficiente, chiedere screenshot W1/MN, screenshot D1 più ampio oppure conferma utente sui massimi/minimi storici.
@@ -272,6 +279,8 @@ Dati scenario mancanti:
 Conditional trade plan:
 Scenario vivo:
 Trade ora:
+[PRICE DISCOVERY / OPEN SPACE CHECK]
+[PARTIAL TP / BREAK-EVEN PLAN]
 Livello di attivazione:
 Evento richiesto:
 Trigger richiesto:
@@ -400,6 +409,8 @@ Dati scenario mancanti:
 Conditional trade plan:
 Scenario vivo:
 Trade ora:
+[PRICE DISCOVERY / OPEN SPACE CHECK]
+[PARTIAL TP / BREAK-EVEN PLAN]
 Livello di attivazione:
 Evento richiesto:
 Trigger richiesto:
