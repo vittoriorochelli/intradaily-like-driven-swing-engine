@@ -137,6 +137,105 @@ Hard veto:
 - target solo teorico
 - stop troppo largo per consentire target realistico
 
+## Scoring finale
+
+Totale: 100 punti
+
+Distribuzione:
+
+- HTF: 30 punti
+- LTF: 25 punti
+- Trigger: 25 punti
+- R:R / qualità operativa: 20 punti
+
+Soglie decisionali:
+
+- >= 75 e nessun hard veto = TRADE VALIDO
+- 60-74 e nessun hard veto = DA MONITORARE
+- < 60 = TRADE NON VALIDO
+- qualsiasi hard veto attivo = TRADE NON VALIDO, anche se il punteggio è alto
+
+Regola:
+
+Il punteggio non può compensare un hard veto.  
+Score alto + hard veto attivo = TRADE NON VALIDO.
+
+Dettaglio punteggi:
+
+HTF — 30 punti:
+- struttura leggibile: 6
+- bias strutturale chiaro: 6
+- zona primaria/secondaria valida: 6
+- Volume Profile / AVWAP / valore coerenti se visibili: 4
+- invalidazione strutturale chiara: 4
+- asset non nel mezzo del nulla: 4
+
+LTF — 25 punti:
+- prezzo dentro o vicino alla zona HTF: 5
+- reazione leggibile: 6
+- reazione coerente con bias HTF: 5
+- micro-struttura favorevole: 4
+- VWAP / Volume Profile locale / dominance coerenti se necessari: 3
+- invalidazione locale chiara: 2
+
+Trigger — 25 punti:
+- entry tecnica ammessa: 5
+- entry non forzata: 4
+- Stop Loss tecnico: 6
+- target tecnico realistico: 4
+- trigger confermato: 4
+- setup non tardivo: 2
+
+R:R / qualità operativa — 20 punti:
+- R:R su TP2 >= 1:2: 6
+- target realistico e raggiungibile: 5
+- stop non troppo stretto: 3
+- stop non troppo largo: 3
+- setup gestibile con rischio monetario fisso: 3
+
+Specifica:
+
+il calcolo preciso della size verrà gestito nella fase Risk e Position Sizing.  
+In questa fase il sistema valuta solo la compatibilità preliminare del setup con la logica di rischio monetario fisso.
+
+## Hard veto sistemici
+
+Hard veto Preflight:
+- screenshot insufficienti
+- timeframe non leggibile
+- prezzo/scala non leggibili
+- indicatori indispensabili mancanti
+- zoom non adeguato
+
+Hard veto HTF:
+- struttura HTF non leggibile
+- bias HTF neutro/confuso
+- prezzo nel mezzo del range
+- zona primaria non identificabile
+- invalidazione strutturale non definibile
+
+Hard veto LTF:
+- prezzo lontano dalla zona HTF
+- nessuna reazione chiara
+- reazione opposta al bias HTF
+- LTF non conferma
+- invalidazione locale non definibile
+
+Hard veto Trigger:
+- entry non tecnica
+- entry forzata
+- entry tardiva
+- Stop Loss non tecnico
+- stop troppo stretto
+- stop troppo largo
+- TP2 non realistico
+- R:R su TP2 < 1:2
+
+Hard veto rischio preliminare:
+- setup non compatibile con rischio monetario fisso
+- size presumibilmente impraticabile
+- spread/volatilità rendono lo stop non utilizzabile
+
 ## Decisione trigger
 
 Valori ammessi:
@@ -167,6 +266,14 @@ R:R su TP1:
 R:R su TP2:
 Conferme:
 Hard veto:
+Score HTF:
+Score LTF:
+Score Trigger:
+Score R:R / qualità operativa:
+Score finale:
+Hard veto attivi:
+Decisione finale:
+Motivo principale:
 Decisione trigger:
 Azione:
 Sintesi operativa:
