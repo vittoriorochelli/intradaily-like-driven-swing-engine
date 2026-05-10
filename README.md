@@ -22,7 +22,8 @@ Il core system è organizzato in blocchi logici:
 3. `2-Prompt LTF.md`
 4. `3-Prompt Trigger.md`
 5. `4-Gestione Posizione.md`
-6. `automazione_full.md`
+6. `5-Risk e Position Sizing.md`
+7. `automazione_full.md`
 
 ## Uso operativo
 
@@ -127,3 +128,12 @@ Il trade è valido solo sopra soglia e senza hard veto.
 Un hard veto blocca sempre il trade.
 
 Lo scoring serve a impedire setup mediocri e forzature discrezionali.
+
+## Logica di rischio
+
+- il sistema usa rischio monetario fisso per trade;
+- lo Stop Loss viene definito tecnicamente;
+- la size viene calcolata dopo;
+- la size si adatta allo Stop Loss;
+- lo Stop Loss non si adatta alla size;
+- se la size non è calcolabile o non è praticabile, il trade non può essere validato operativamente.
