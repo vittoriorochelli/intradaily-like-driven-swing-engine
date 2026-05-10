@@ -26,7 +26,17 @@ Il core system è organizzato in blocchi logici:
 7. `6-Journal e Review.md`
 8. `7-Multi Asset Ranking.md`
 9. `8-Paper Trading Protocol.md`
-10. `automazione_full.md`
+10. `9-Output Schema.md`
+11. `automazione_full.md`
+
+## Agentic execution e output schema
+
+- `AGENTS.md` definisce le regole operative per l’agente;
+- `9-Output Schema.md` definisce gli output standard;
+- ogni analisi deve iniziare con `[DECISIONE OPERATIVA]`;
+- gli output devono essere confrontabili, journal-ready e non narrativi;
+- l’agente non deve inventare dati mancanti;
+- se manca un dato indispensabile, deve chiedere una sola integrazione mirata.
 
 ## Uso operativo
 
