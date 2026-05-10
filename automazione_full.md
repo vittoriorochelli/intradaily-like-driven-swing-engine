@@ -56,6 +56,11 @@ Il sistema swing usa principalmente automazione full.
 - HTF deve produrre zona primaria e zona secondaria
 - LTF deve leggere solo la reazione del prezzo rispetto alla zona HTF
 - Trigger deve decidere solo: TRADE VALIDO / TRADE NON VALIDO / DA MONITORARE
+- Il Trigger deve produrre Entry, SL, TP1, TP2 e R:R
+- La decisione finale non può essere TRADE VALIDO senza SL tecnico
+- La decisione finale non può essere TRADE VALIDO senza TP2 realistico almeno a 1:2
+- Se Entry, SL o TP sono incerti, il sistema deve classificare DA MONITORARE o TRADE NON VALIDO
+- La size non viene decisa in questa fase: verrà tarata dopo sul rischio monetario fisso
 - Se uno screenshot è assegnato male, rimappalo
 - Se mancano dati essenziali, segnalalo
 - Se mancano indicatori necessari, fermati e chiedi integrazione mirata
@@ -78,10 +83,19 @@ Reazione nella zona:
 Trigger:
 Decisione trigger:
 Direzione:
+Tipo entry:
 Entry:
+Motivo entry:
 Stop:
-Target:
-R:R:
+Motivo Stop Loss:
+TP1:
+Motivo TP1:
+TP2:
+Motivo TP2:
+R:R su TP1:
+R:R su TP2:
+Target realistico:
+Journal-ready fields:
 Hard veto:
 Qualità setup:
 Azione:
