@@ -23,7 +23,8 @@ Il core system è organizzato in blocchi logici:
 4. `3-Prompt Trigger.md`
 5. `4-Gestione Posizione.md`
 6. `5-Risk e Position Sizing.md`
-7. `automazione_full.md`
+7. `6-Journal e Review.md`
+8. `automazione_full.md`
 
 ## Uso operativo
 
@@ -33,6 +34,12 @@ L’uso ordinario avviene tramite:
 
 I singoli file modulari servono come componenti logiche interne.  
 Nel sistema swing/multiday non è previsto un refresh continuo del trigger durante la giornata.
+
+## Journal e review
+
+- ogni analisi deve produrre un blocco journal-ready;
+- il journal registra anche trade non validi, setup da monitorare e asset non leggibili;
+- la review serve a misurare disciplina, qualità del processo e capacità del sistema di evitare trade mediocri.
 
 
 ## Logica di rischio
