@@ -27,7 +27,8 @@ Il core system è organizzato in blocchi logici:
 8. `7-Multi Asset Ranking.md`
 9. `8-Paper Trading Protocol.md`
 10. `9-Output Schema.md`
-11. `automazione_full.md`
+11. `10-Test Protocol.md`
+12. `automazione_full.md`
 
 ## Agentic execution e output schema
 
@@ -68,6 +69,13 @@ Nel sistema swing/multiday non è previsto un refresh continuo del trigger duran
 - il paper trading serve a validare processo, disciplina, hard veto, scoring, rischio e journal;
 - prima del reale servono almeno 50 trade simulati, 8 settimane operative e review completa;
 - nessuna automazione reale deve essere implementata prima della validazione.
+
+## Test protocol
+
+- prima di PT-0 e paper trading il sistema deve essere collaudato con screenshot reali;
+- il test protocol serve a trovare errori, ambiguità e output inutilizzabili;
+- il sistema deve superare i test minimi prima di essere usato in osservazione;
+- eventuali problemi bloccanti devono essere corretti prima di procedere.
 
 
 ## Logica di rischio
