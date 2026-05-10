@@ -84,6 +84,13 @@ Valori ammessi:
 - Non anticipare trigger
 - Non inventare dati non visibili
 
+## Dati strutturali per Scenario Evidence
+
+HTF deve produrre i dati strutturali necessari alla classificazione degli scenari.
+
+HTF non deve classificare lo scenario finale.
+HTF deve fornire i dati solidi per il modulo `12-Scenario Evidence e Candidate Discovery.md`.
+
 ## Output HTF obbligatorio
 
 [ASSET: ... | STRUTTURA HTF]
@@ -107,4 +114,23 @@ Invalidazione strutturale:
 Asset valido fuori zona:
 Cosa osservare in LTF:
 Qualità struttura:
+Supply rilevanti:
+Demand rilevanti:
+Livelli di rotazione:
+Liquidità sopra:
+Liquidità sotto:
+Area di valore:
+POC / VAH / VAL:
+VWAP / AVWAP utilizzabili:
+Indicatori non verificabili:
+Prezzo attuale rispetto alle zone:
+Movimento precedente:
+Reazione visibile:
+Spazio operativo:
+Dati strutturali mancanti:
+Affidabilità dati strutturali:
 Sintesi operativa:
+
+Regola:
+se questi dati non sono ricavabili dallo screenshot, usare `mancante`, `non verificabile` o `non applicabile`.
+Non inventare dati strutturali.
