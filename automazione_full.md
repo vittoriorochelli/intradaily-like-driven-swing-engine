@@ -96,7 +96,7 @@ Il sistema swing usa principalmente automazione full.
 - Il candidate principale deve essere scelto per rilevanza operativa dal decision point in avanti, non per forza storica del movimento.
 - Un setup TARDIVO non può diventare TRADE VALIDO senza nuovo trigger/retest.
 - TRADE_NOW nello scenario non significa TRADE VALIDO finale.
-- LTF deve leggere solo la reazione del prezzo rispetto alla zona HTF
+- LTF deve leggere la reazione del prezzo rispetto alla zona HTF e rispetto allo scenario principale selezionato.
 - Trigger deve decidere solo: TRADE VALIDO / TRADE NON VALIDO / DA MONITORARE
 - Il Trigger deve produrre Entry, SL, TP1, TP2 e R:R
 - Dopo Trigger, il sistema deve produrre Conditional Trade Plan.
