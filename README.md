@@ -30,7 +30,8 @@ Il core system è organizzato in blocchi logici:
 11. `10-Test Protocol.md`
 12. `11-Narrativa da Screenshot.md`
 13. `12-Scenario Evidence e Candidate Discovery.md`
-14. `automazione_full.md`
+14. `13-Conditional Trade Plan.md`
+15. `automazione_full.md`
 
 ## Agentic execution e output schema
 
@@ -109,6 +110,16 @@ La repository deve essere autosufficiente: una chat nuova deve poter eseguire il
 - se i dati sono insufficienti, lo scenario deve essere NO_EDGE o DA MONITORARE;
 - il candidate principale viene scelto per rilevanza operativa futura, non per forza storica del movimento;
 - TRADE_NOW nello scenario non significa TRADE VALIDO finale.
+
+## Conditional trade plan
+
+- il sistema distingue tra trade valido ora e scenario vivo;
+- quando il trade immediato non è valido ma lo scenario è vivo, produce un piano condizionale;
+- il piano condizionale non valida il trade;
+- il piano condizionale definisce livello di attivazione, evento richiesto, trigger, invalidazione, alert e screenshot successivo;
+- se TP2 non è visibile, il sistema deve verificare price discovery o chiedere storico aggiuntivo;
+- TP1 parziale e Stop Loss a BE sono ammessi come gestione condizionale, non come scorciatoia per validare trade senza TP2;
+- il paper trading richiede comunque nuova validazione TRADE VALIDO.
 
 
 ## Logica di rischio

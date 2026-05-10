@@ -190,6 +190,13 @@ Un test è superato solo se:
 - restituisce score finale;
 - produce journal auto-entry;
 - chiede una sola integrazione mirata se manca un dato indispensabile;
+- esegue Conditional Trade Plan dopo Trigger;
+- distingue tra trade immediato e scenario vivo;
+- produce Price Discovery / Open Space Check quando TP2 non è visibile sopra/sotto massimi/minimi;
+- chiede screenshot W1/MN, D1 più ampio o conferma utente se price discovery non è verificabile;
+- produce Partial TP / BE Plan quando TP1 è tecnico ma TP2 è condizionale;
+- non usa TP1 + BE per aggirare TP2, R:R o Risk;
+- non dichiara paper trade su piano condizionale non validato;
 - usa `mancante`, `non applicabile` o `da aggiornare` per i dati non disponibili.
 
 ## Criteri di fallimento
@@ -221,6 +228,14 @@ Un test fallisce se il sistema:
 - non dichiara dati scenario mancanti;
 - interpreta TRADE_NOW come TRADE VALIDO finale;
 - promuove scenario TARDIVO senza nuovo trigger/retest.
+- dichiara TRADE NON VALIDO senza distinguere scenario vivo quando lo scenario è ancora valido;
+- non produce piano condizionale quando scenario = WAIT_FOR_TRIGGER o WAIT_FOR_RETEST;
+- inventa TP2 in price discovery;
+- non chiede screenshot aggiuntivo quando lo storico è insufficiente;
+- usa TP1 + BE per validare trade senza TP2;
+- considera Conditional Trade Plan come TRADE VALIDO;
+- considera Conditional Trade Plan come paper trade;
+- non registra il piano condizionale nel journal.
 
 ## Registro problemi di test
 
@@ -258,6 +273,13 @@ Classificare ogni problema come:
 - errore Gestione;
 - errore Journal;
 - errore Multi-asset;
+- errore Conditional Trade Plan;
+- piano condizionale mancante;
+- price discovery non verificata;
+- TP2 di estensione inventato;
+- TP1/BE usato impropriamente;
+- scenario vivo trattato come setup morto;
+- paper trade generato da piano condizionale.
 - errore Output Schema;
 - errore Agentico;
 - ambiguità di prompt;
