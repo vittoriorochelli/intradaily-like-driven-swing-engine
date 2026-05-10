@@ -276,4 +276,21 @@ Decisione finale:
 Motivo principale:
 Decisione trigger:
 Azione:
+Dati pronti per position sizing: sì / no
+Dati mancanti per position sizing:
 Sintesi operativa:
+
+## Relazione con Risk e Position Sizing
+
+Questa fase non calcola la size.
+
+Il Trigger deve solo:
+
+- validare se il setup è realmente attivabile
+- confermare che entry, Stop Loss tecnico e target siano definiti
+- confermare che il setup sia compatibile in modo preliminare con rischio monetario fisso
+- esplicitare se i dati sono pronti per il position sizing
+
+Il calcolo della size e la verifica di fattibilità monetaria finale sono demandati a:
+
+- `5-Risk e Position Sizing.md`
