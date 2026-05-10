@@ -279,13 +279,39 @@ Dati scenario mancanti:
 Conditional trade plan:
 Scenario vivo:
 Trade ora:
-[PRICE DISCOVERY / OPEN SPACE CHECK]
-[PARTIAL TP / BREAK-EVEN PLAN]
 Livello di attivazione:
 Evento richiesto:
 Trigger richiesto:
 Invalidazione scenario:
 Alert da impostare:
+[PRICE DISCOVERY / OPEN SPACE CHECK]
+Prezzo vicino a massimi/minimi visibili:
+Massimi/minimi superiori o inferiori visibili:
+Storico sufficiente:
+Price discovery confermata:
+Price discovery non verificabile:
+Open space condizionale:
+Screenshot aggiuntivo richiesto:
+TP1 strutturale:
+TP2 strutturale:
+TP2 di estensione ammesso:
+Regola TP2 di estensione:
+Qualità TP2:
+Impatto su R:R:
+[PARTIAL TP / BREAK-EVEN PLAN]
+TP1 tecnico:
+TP1 raggiungibile:
+R:R su TP1:
+Gestione a TP1:
+Percentuale parziale:
+Stop a BE dopo TP1:
+Condizione per spostare SL a BE:
+Runner verso TP2:
+TP2 strutturale:
+TP2 di estensione:
+Rischio residuo dopo BE:
+Trade valido senza TP2 statico:
+Motivo:
 Price discovery check:
 TP2 di estensione ammesso:
 Partial TP / BE plan:
@@ -417,6 +443,11 @@ Trigger richiesto:
 Invalidazione scenario:
 Alert da impostare:
 Price discovery check:
+Esito price discovery/open space:
+Storico sufficiente:
+Screenshot aggiuntivo richiesto:
+Regola TP2 di estensione:
+Qualità TP2 di estensione:
 TP2 di estensione ammesso:
 Partial TP / BE plan:
 Gestione a TP1:
