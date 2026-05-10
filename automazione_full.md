@@ -28,13 +28,15 @@ Non è previsto il refresh frequente del trigger durante la giornata.
 ### CASO A — nessun trade aperto
 
 1. Preflight
-2. HTF
-3. LTF
-4. Trigger
-5. Scoring finale
-6. Risk e Position Sizing
-7. Decisione finale
-8. Journal auto-entry
+2. Indicator Setup Sanity Check
+3. Narrativa da Screenshot
+4. HTF
+5. LTF
+6. Trigger
+7. Scoring finale
+8. Risk e Position Sizing
+9. Decisione finale
+10. Journal auto-entry
 
 ### CASO B — trade aperto
 
@@ -102,6 +104,11 @@ Il sistema swing usa principalmente automazione full.
 - Se mancano dati essenziali, segnalalo
 - Se mancano indicatori necessari, fermati e chiedi integrazione mirata
 - Se gli screenshot non sono leggibili o mancano indicatori indispensabili, fermati al Preflight
+- Prima di usare VWAP, AVWAP o Volume Profile, il sistema deve verificarne il settaggio.
+- Un indicatore visibile non è automaticamente utilizzabile.
+- Se AVWAP o VP non sono verificabili, devono essere classificati come `non verificabile` o `utilizzabile con cautela`.
+- La price action ha priorità sugli indicatori non verificabili.
+- Se un trade richiede una conferma da VP/VWAP/AVWAP e quella conferma non è verificabile, il trade non può essere `TRADE VALIDO`.
 - Non forzare trade
 - Se il trade non è valido, dichiaralo chiaramente
 - Se il materiale è insufficiente, fermati al preflight
@@ -224,6 +231,10 @@ Errore di processo se ignorato:
 [ASSET: ... | DECISIONE FINALE]
 
 Preflight:
+Indicator setup check:
+Indicatori utilizzabili per narrativa:
+Indicatori non verificabili:
+Affidabilità indicatori:
 Struttura HTF:
 Zona primaria:
 Zona secondaria:

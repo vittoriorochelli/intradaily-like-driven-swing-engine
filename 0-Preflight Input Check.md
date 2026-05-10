@@ -68,6 +68,20 @@ LTF H4/H1:
 
 Se un indicatore necessario alla decisione non è visibile, il sistema deve chiedere integrazione.
 
+## Indicator setup sanity check
+
+Prima di usare VWAP, AVWAP o Volume Profile nella narrativa o nella decisione, il sistema deve verificare se il loro settaggio è sensato.
+
+Regole:
+
+- indicatore visibile non significa indicatore utilizzabile;
+- se il tipo di VWAP non è chiaro, non usarlo come conferma decisiva;
+- se l’ancoraggio dell’AVWAP non è visibile o dichiarato, usarla solo come riferimento debole;
+- se il Volume Profile non copre il movimento o la balance rilevante, usarlo con cautela o non usarlo;
+- se POC, VAH, VAL, HVN, LVN non sono leggibili, il Volume Profile non deve essere decisivo;
+- se lo screenshot è troppo stretto e distorce il profilo, il VP non deve guidare la decisione;
+- price action e struttura hanno priorità sugli indicatori non verificabili.
+
 ## Controlli da eseguire
 
 - Asset dichiarato chiaramente
@@ -98,3 +112,27 @@ Indicatori opzionali mancanti:
 Materiale sufficiente: sì / no / parziale
 Integrazione richiesta:
 Procedere con analisi: sì / no / solo parziale
+Indicator setup check:
+VWAP visibile:
+Tipo VWAP:
+VWAP utilizzabile:
+AVWAP visibile:
+Anchor AVWAP visibile/dichiarato:
+Anchor AVWAP sensato:
+AVWAP utilizzabile:
+Volume Profile visibile:
+Range/ancoraggio VP sensato:
+POC/VAH/VAL leggibili:
+VP utilizzabile:
+Indicatori utilizzabili per narrativa:
+Indicatori solo di supporto:
+Indicatori non utilizzabili:
+Impatto sulla decisione:
+
+Valori ammessi:
+
+- utilizzabile
+- utilizzabile con cautela
+- non verificabile
+- non utilizzabile
+- non visibile

@@ -100,6 +100,15 @@ Gli hard veto sono superiori allo score.
 
 Score alto + hard veto attivo = TRADE NON VALIDO.
 
+## Verifica settaggio indicatori
+
+- L’agente deve verificare se VWAP, AVWAP e Volume Profile sono leggibili e sensati prima di usarli.
+- L’agente non deve usare AVWAP come conferma decisiva se l’anchor non è visibile o dichiarato.
+- L’agente non deve usare Volume Profile come conferma decisiva se il range del profilo non è coerente o leggibile.
+- L’agente deve dare priorità alla struttura prezzo rispetto agli indicatori non verificabili.
+- Se un indicatore è visibile ma non verificabile, deve dichiararlo.
+- Se la conferma dell’indicatore è necessaria per validare un trade, ma l’indicatore non è verificabile, il trade deve essere `DA MONITORARE` o `TRADE NON VALIDO`.
+
 ## Output obbligatorio
 
 Ogni risposta operativa deve iniziare con:
